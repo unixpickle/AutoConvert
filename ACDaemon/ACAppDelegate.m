@@ -67,11 +67,20 @@
             NSLog(@"Ignoring file: %@", newPath);
             return;
         }
-        [[FocusManager sharedFocusManager] forceAppFocus];
-        NSRunAlertPanel(@"Would you like to convert the file data?" , @"This could take some time.", @"Yes", @"No", nil);
-        [[FocusManager sharedFocusManager] resignAppFocus];
         ACConverter * converter = [[ACConverterPool sharedPool] converterForFile:newPath source:oldExt destination:newExt];
         NSLog(@"Converter: %@", converter);
+        if (converter) {
+            NSString * title = [NSString stringWithFormat:@"Would you like to convert this file from \"%@\" to \"%@\"?", oldExt, newExt];
+            NSString * subtitle = @"Conversion could take a significant amount of time if re-encoding is necessary.";
+            NSImage * icon = [[NSImage alloc] initWithContentsOfFile:@"PATH HERE"];
+            ACConversionWindow * window = [[ACConversionWindow alloc] initWithTitle:title
+                                                                           subtitle:subtitle
+                                                                               icon:icon];
+            [[FocusManager sharedFocusManager] forceAppFocus];
+            [window show];
+            //NSRunAlertPanel(@"Would you like to convert the file data?" , @"This could take some time.", @"Yes", @"No", nil);
+            //[[FocusManager sharedFocusManager] resignAppFocus];
+        }
     }
 }
 

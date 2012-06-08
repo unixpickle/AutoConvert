@@ -33,6 +33,7 @@
 		FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCD15822D1500A774D1 /* ACConverterPool.m */; };
 		FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FD015827F4600A774D1 /* ScriptingBridge.framework */; };
 		FA771FD215827F6A00A774D1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF2115800D4900D64D76 /* AppKit.framework */; };
+		FA771FD615828F8B00A774D1 /* ACConversionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FD515828F8B00A774D1 /* ACConversionWindow.m */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
@@ -84,6 +85,8 @@
 		FA771FCD15822D1500A774D1 /* ACConverterPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverterPool.m; sourceTree = "<group>"; };
 		FA771FCF15827D5300A774D1 /* Finder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		FA771FD015827F4600A774D1 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		FA771FD415828F8A00A774D1 /* ACConversionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConversionWindow.h; sourceTree = "<group>"; };
+		FA771FD515828F8B00A774D1 /* ACConversionWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConversionWindow.m; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				FA73FF4F15800D8E00D64D76 /* ACAppDelegate.m */,
 				FA771FA71581378400A774D1 /* ACRenameWatcher.h */,
 				FA771FA81581378400A774D1 /* ACRenameWatcher.m */,
+				FA771FD415828F8A00A774D1 /* ACConversionWindow.h */,
+				FA771FD515828F8B00A774D1 /* ACConversionWindow.m */,
 				FA73FF5115800D8E00D64D76 /* MainMenu.xib */,
 				FA73FF4315800D8E00D64D76 /* Supporting Files */,
 			);
@@ -385,6 +390,7 @@
 				FA771FC8158224C700A774D1 /* ACConverter.m in Sources */,
 				FA771FCB15822A5B00A774D1 /* ACPNGJPGConverter.m in Sources */,
 				FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */,
+				FA771FD615828F8B00A774D1 /* ACConversionWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
