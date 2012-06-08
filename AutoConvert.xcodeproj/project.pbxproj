@@ -13,6 +13,29 @@
 		FA73FF2F15800D4900D64D76 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF2D15800D4900D64D76 /* Credits.rtf */; };
 		FA73FF3215800D4900D64D76 /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF3115800D4900D64D76 /* ACAppDelegate.m */; };
 		FA73FF3515800D4900D64D76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF3315800D4900D64D76 /* MainMenu.xib */; };
+		FA73FF4115800D8E00D64D76 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
+		FA73FF4715800D8E00D64D76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF4515800D8E00D64D76 /* InfoPlist.strings */; };
+		FA73FF4915800D8E00D64D76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF4815800D8E00D64D76 /* main.m */; };
+		FA73FF4D15800D8E00D64D76 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF4B15800D8E00D64D76 /* Credits.rtf */; };
+		FA73FF5015800D8E00D64D76 /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF4F15800D8E00D64D76 /* ACAppDelegate.m */; };
+		FA73FF5315800D8E00D64D76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF5115800D8E00D64D76 /* MainMenu.xib */; };
+		FA73FF5B15800DB400D64D76 /* ACPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF5A15800DB400D64D76 /* ACPreferences.m */; };
+		FA73FF5C15800DB400D64D76 /* ACPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF5A15800DB400D64D76 /* ACPreferences.m */; };
+		FA771FA215812E7000A774D1 /* ANAutoLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FA115812E7000A774D1 /* ANAutoLaunch.m */; };
+		FA771FA415812EC000A774D1 /* ACDaemon.app in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF3F15800D8E00D64D76 /* ACDaemon.app */; };
+		FA771FA91581378400A774D1 /* ACRenameWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FA81581378400A774D1 /* ACRenameWatcher.m */; };
+		FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FB3158147F300A774D1 /* CarbonAppProcess.m */; };
+		FA771FB7158147F300A774D1 /* FocusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FB5158147F300A774D1 /* FocusManager.m */; };
+		FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC015814ABA00A774D1 /* ACPathMatcher.m */; };
+		FA771FC415814AC700A774D1 /* ACPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC315814AC700A774D1 /* ACPath.m */; };
+		FA771FC8158224C700A774D1 /* ACConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC7158224C700A774D1 /* ACConverter.m */; };
+		FA771FCB15822A5B00A774D1 /* ACPNGJPGConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */; };
+		FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCD15822D1500A774D1 /* ACConverterPool.m */; };
+		FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FD015827F4600A774D1 /* ScriptingBridge.framework */; };
+		FA771FD215827F6A00A774D1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF2115800D4900D64D76 /* AppKit.framework */; };
+		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
+		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
+		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +44,52 @@
 		FA73FF2115800D4900D64D76 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		FA73FF2215800D4900D64D76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA73FF2315800D4900D64D76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FA73FF2615800D4900D64D76 /* AutoConvert-Info.plist */ = {isa = PBXFileReference; path = "AutoConvert-Info.plist"; sourceTree = "<group>"; };
+		FA73FF2615800D4900D64D76 /* AutoConvert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoConvert-Info.plist"; sourceTree = "<group>"; };
 		FA73FF2815800D4900D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA73FF2A15800D4900D64D76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA73FF2C15800D4900D64D76 /* AutoConvert-Prefix.pch */ = {isa = PBXFileReference; path = "AutoConvert-Prefix.pch"; sourceTree = "<group>"; };
+		FA73FF2C15800D4900D64D76 /* AutoConvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoConvert-Prefix.pch"; sourceTree = "<group>"; };
 		FA73FF2E15800D4900D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		FA73FF3015800D4900D64D76 /* ACAppDelegate.h */ = {isa = PBXFileReference; path = ACAppDelegate.h; sourceTree = "<group>"; };
+		FA73FF3015800D4900D64D76 /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
 		FA73FF3115800D4900D64D76 /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
 		FA73FF3415800D4900D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA73FF3F15800D8E00D64D76 /* ACDaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA73FF4415800D8E00D64D76 /* ACDaemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ACDaemon-Info.plist"; sourceTree = "<group>"; };
+		FA73FF4615800D8E00D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA73FF4815800D8E00D64D76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA73FF4A15800D8E00D64D76 /* ACDaemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACDaemon-Prefix.pch"; sourceTree = "<group>"; };
+		FA73FF4C15800D8E00D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FA73FF4E15800D8E00D64D76 /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
+		FA73FF4F15800D8E00D64D76 /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
+		FA73FF5215800D8E00D64D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA73FF5915800DB400D64D76 /* ACPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPreferences.h; sourceTree = "<group>"; };
+		FA73FF5A15800DB400D64D76 /* ACPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPreferences.m; sourceTree = "<group>"; };
+		FA771FA015812E7000A774D1 /* ANAutoLaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAutoLaunch.h; sourceTree = "<group>"; };
+		FA771FA115812E7000A774D1 /* ANAutoLaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAutoLaunch.m; sourceTree = "<group>"; };
+		FA771FA515812FD800A774D1 /* ACDaemonInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACDaemonInterface.h; sourceTree = "<group>"; };
+		FA771FA71581378400A774D1 /* ACRenameWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACRenameWatcher.h; sourceTree = "<group>"; };
+		FA771FA81581378400A774D1 /* ACRenameWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACRenameWatcher.m; sourceTree = "<group>"; };
+		FA771FB2158147F300A774D1 /* CarbonAppProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonAppProcess.h; sourceTree = "<group>"; };
+		FA771FB3158147F300A774D1 /* CarbonAppProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonAppProcess.m; sourceTree = "<group>"; };
+		FA771FB4158147F300A774D1 /* FocusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusManager.h; sourceTree = "<group>"; };
+		FA771FB5158147F300A774D1 /* FocusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusManager.m; sourceTree = "<group>"; };
+		FA771FBF15814ABA00A774D1 /* ACPathMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPathMatcher.h; sourceTree = "<group>"; };
+		FA771FC015814ABA00A774D1 /* ACPathMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathMatcher.m; sourceTree = "<group>"; };
+		FA771FC215814AC700A774D1 /* ACPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPath.h; sourceTree = "<group>"; };
+		FA771FC315814AC700A774D1 /* ACPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPath.m; sourceTree = "<group>"; };
+		FA771FC6158224C700A774D1 /* ACConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverter.h; sourceTree = "<group>"; };
+		FA771FC7158224C700A774D1 /* ACConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverter.m; sourceTree = "<group>"; };
+		FA771FC915822A5B00A774D1 /* ACPNGJPGConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPNGJPGConverter.h; sourceTree = "<group>"; };
+		FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPNGJPGConverter.m; sourceTree = "<group>"; };
+		FA771FCC15822D1500A774D1 /* ACConverterPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverterPool.h; sourceTree = "<group>"; };
+		FA771FCD15822D1500A774D1 /* ACConverterPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverterPool.m; sourceTree = "<group>"; };
+		FA771FCF15827D5300A774D1 /* Finder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
+		FA771FD015827F4600A774D1 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
+		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
+		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
+		FAF9804C1580F81200C25EF0 /* ANBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBarButton.m; sourceTree = "<group>"; };
+		FAF9804D1580F81200C25EF0 /* ANControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANControlBar.h; sourceTree = "<group>"; };
+		FAF9804E1580F81200C25EF0 /* ANControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANControlBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,13 +101,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA73FF3C15800D8E00D64D76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA771FD215827F6A00A774D1 /* AppKit.framework in Frameworks */,
+				FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */,
+				FA73FF4115800D8E00D64D76 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FA73FF0F15800D4900D64D76 = {
 			isa = PBXGroup;
 			children = (
+				FAF980481580F81200C25EF0 /* ANControlBar */,
+				FA73FF5815800DA800D64D76 /* Shared */,
 				FA73FF2415800D4900D64D76 /* AutoConvert */,
+				FA73FF4215800D8E00D64D76 /* ACDaemon */,
 				FA73FF1D15800D4900D64D76 /* Frameworks */,
 				FA73FF1B15800D4900D64D76 /* Products */,
 			);
@@ -56,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FA73FF1A15800D4900D64D76 /* AutoConvert.app */,
+				FA73FF3F15800D8E00D64D76 /* ACDaemon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +138,7 @@
 		FA73FF1D15800D4900D64D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA771FD015827F4600A774D1 /* ScriptingBridge.framework */,
 				FA73FF1E15800D4900D64D76 /* Cocoa.framework */,
 				FA73FF2015800D4900D64D76 /* Other Frameworks */,
 			);
@@ -82,6 +158,8 @@
 		FA73FF2415800D4900D64D76 /* AutoConvert */ = {
 			isa = PBXGroup;
 			children = (
+				FA771FA015812E7000A774D1 /* ANAutoLaunch.h */,
+				FA771FA115812E7000A774D1 /* ANAutoLaunch.m */,
 				FA73FF3015800D4900D64D76 /* ACAppDelegate.h */,
 				FA73FF3115800D4900D64D76 /* ACAppDelegate.m */,
 				FA73FF3315800D4900D64D76 /* MainMenu.xib */,
@@ -102,6 +180,93 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA73FF4215800D8E00D64D76 /* ACDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				FA771FC5158224B900A774D1 /* Conversion */,
+				FA771FB1158147F300A774D1 /* Focus */,
+				FA771FBE15814AB000A774D1 /* Path Matcher */,
+				FA73FF4E15800D8E00D64D76 /* ACAppDelegate.h */,
+				FA73FF4F15800D8E00D64D76 /* ACAppDelegate.m */,
+				FA771FA71581378400A774D1 /* ACRenameWatcher.h */,
+				FA771FA81581378400A774D1 /* ACRenameWatcher.m */,
+				FA73FF5115800D8E00D64D76 /* MainMenu.xib */,
+				FA73FF4315800D8E00D64D76 /* Supporting Files */,
+			);
+			path = ACDaemon;
+			sourceTree = "<group>";
+		};
+		FA73FF4315800D8E00D64D76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA73FF4415800D8E00D64D76 /* ACDaemon-Info.plist */,
+				FA73FF4515800D8E00D64D76 /* InfoPlist.strings */,
+				FA73FF4815800D8E00D64D76 /* main.m */,
+				FA73FF4A15800D8E00D64D76 /* ACDaemon-Prefix.pch */,
+				FA73FF4B15800D8E00D64D76 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA73FF5815800DA800D64D76 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA73FF5915800DB400D64D76 /* ACPreferences.h */,
+				FA73FF5A15800DB400D64D76 /* ACPreferences.m */,
+				FA771FA515812FD800A774D1 /* ACDaemonInterface.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FA771FB1158147F300A774D1 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				FA771FCF15827D5300A774D1 /* Finder.h */,
+				FA771FB2158147F300A774D1 /* CarbonAppProcess.h */,
+				FA771FB3158147F300A774D1 /* CarbonAppProcess.m */,
+				FA771FB4158147F300A774D1 /* FocusManager.h */,
+				FA771FB5158147F300A774D1 /* FocusManager.m */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		FA771FBE15814AB000A774D1 /* Path Matcher */ = {
+			isa = PBXGroup;
+			children = (
+				FA771FBF15814ABA00A774D1 /* ACPathMatcher.h */,
+				FA771FC015814ABA00A774D1 /* ACPathMatcher.m */,
+				FA771FC215814AC700A774D1 /* ACPath.h */,
+				FA771FC315814AC700A774D1 /* ACPath.m */,
+			);
+			path = "Path Matcher";
+			sourceTree = "<group>";
+		};
+		FA771FC5158224B900A774D1 /* Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				FA771FC6158224C700A774D1 /* ACConverter.h */,
+				FA771FC7158224C700A774D1 /* ACConverter.m */,
+				FA771FC915822A5B00A774D1 /* ACPNGJPGConverter.h */,
+				FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */,
+				FA771FCC15822D1500A774D1 /* ACConverterPool.h */,
+				FA771FCD15822D1500A774D1 /* ACConverterPool.m */,
+			);
+			path = Conversion;
+			sourceTree = "<group>";
+		};
+		FAF980481580F81200C25EF0 /* ANControlBar */ = {
+			isa = PBXGroup;
+			children = (
+				FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */,
+				FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */,
+				FAF9804B1580F81200C25EF0 /* ANBarButton.h */,
+				FAF9804C1580F81200C25EF0 /* ANBarButton.m */,
+				FAF9804D1580F81200C25EF0 /* ANControlBar.h */,
+				FAF9804E1580F81200C25EF0 /* ANControlBar.m */,
+			);
+			path = ANControlBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +285,23 @@
 			name = AutoConvert;
 			productName = AutoConvert;
 			productReference = FA73FF1A15800D4900D64D76 /* AutoConvert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA73FF3E15800D8E00D64D76 /* ACDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA73FF5415800D8E00D64D76 /* Build configuration list for PBXNativeTarget "ACDaemon" */;
+			buildPhases = (
+				FA73FF3B15800D8E00D64D76 /* Sources */,
+				FA73FF3C15800D8E00D64D76 /* Frameworks */,
+				FA73FF3D15800D8E00D64D76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACDaemon;
+			productName = ACDaemon;
+			productReference = FA73FF3F15800D8E00D64D76 /* ACDaemon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,6 +326,7 @@
 			projectRoot = "";
 			targets = (
 				FA73FF1915800D4900D64D76 /* AutoConvert */,
+				FA73FF3E15800D8E00D64D76 /* ACDaemon */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +339,17 @@
 				FA73FF2915800D4900D64D76 /* InfoPlist.strings in Resources */,
 				FA73FF2F15800D4900D64D76 /* Credits.rtf in Resources */,
 				FA73FF3515800D4900D64D76 /* MainMenu.xib in Resources */,
+				FA771FA415812EC000A774D1 /* ACDaemon.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA73FF3D15800D8E00D64D76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA73FF4715800D8E00D64D76 /* InfoPlist.strings in Resources */,
+				FA73FF4D15800D8E00D64D76 /* Credits.rtf in Resources */,
+				FA73FF5315800D8E00D64D76 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +362,29 @@
 			files = (
 				FA73FF2B15800D4900D64D76 /* main.m in Sources */,
 				FA73FF3215800D4900D64D76 /* ACAppDelegate.m in Sources */,
+				FA73FF5B15800DB400D64D76 /* ACPreferences.m in Sources */,
+				FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */,
+				FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */,
+				FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */,
+				FA771FA215812E7000A774D1 /* ANAutoLaunch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA73FF3B15800D8E00D64D76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA73FF4915800D8E00D64D76 /* main.m in Sources */,
+				FA73FF5015800D8E00D64D76 /* ACAppDelegate.m in Sources */,
+				FA73FF5C15800DB400D64D76 /* ACPreferences.m in Sources */,
+				FA771FA91581378400A774D1 /* ACRenameWatcher.m in Sources */,
+				FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */,
+				FA771FB7158147F300A774D1 /* FocusManager.m in Sources */,
+				FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */,
+				FA771FC415814AC700A774D1 /* ACPath.m in Sources */,
+				FA771FC8158224C700A774D1 /* ACConverter.m in Sources */,
+				FA771FCB15822A5B00A774D1 /* ACPNGJPGConverter.m in Sources */,
+				FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +411,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA73FF3415800D4900D64D76 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FA73FF4515800D8E00D64D76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA73FF4615800D8E00D64D76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA73FF4B15800D8E00D64D76 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA73FF4C15800D8E00D64D76 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FA73FF5115800D8E00D64D76 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA73FF5215800D8E00D64D76 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -270,6 +511,28 @@
 			};
 			name = Release;
 		};
+		FA73FF5515800D8E00D64D76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACDaemon/ACDaemon-Prefix.pch";
+				INFOPLIST_FILE = "ACDaemon/ACDaemon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA73FF5615800D8E00D64D76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACDaemon/ACDaemon-Prefix.pch";
+				INFOPLIST_FILE = "ACDaemon/ACDaemon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -289,6 +552,16 @@
 				FA73FF3A15800D4900D64D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA73FF5415800D8E00D64D76 /* Build configuration list for PBXNativeTarget "ACDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA73FF5515800D8E00D64D76 /* Debug */,
+				FA73FF5615800D8E00D64D76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
