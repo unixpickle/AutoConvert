@@ -11,7 +11,7 @@
 #import "ACPreferences.h"
 #import "ACRenameWatcher.h"
 #import "ACPathMatcher.h"
-#import "ACConversionWindow.h"
+#import "ACConfirmDialog.h"
 #import "FocusManager.h"
 
 #import "ACConverterPool.h"
