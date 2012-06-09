@@ -12,10 +12,9 @@
 #import "ACRenameWatcher.h"
 #import "ACPathMatcher.h"
 #import "ACConfirmDialog.h"
-#import "FocusManager.h"
 
 #import "ACConverterPool.h"
-#import "ACPNGJPGConverter.h"
+#import "ACImageConverter.h"
 
 @interface ACAppDelegate : NSObject <NSApplicationDelegate, ACDaemonInterface, ACRenameWatcherDelegate> {
     NSConnection * connection;

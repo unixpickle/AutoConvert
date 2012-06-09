@@ -28,19 +28,7 @@
     [watcher setDelegate:self];
     [watcher startWatching];
     
-    [[ACConverterPool sharedPool] addConverterClass:[ACPNGJPGConverter class]];
-}
-
-- (void)applicationDidResignActive:(NSNotification *)notification {
-	[[FocusManager sharedFocusManager] setSecondaryMainApp:[CarbonAppProcess frontmostProcess]];
-}
-
-- (void)applicationWillBecomeActive:(NSNotification *)notification {
-	CarbonAppProcess * frontmost = [CarbonAppProcess frontmostProcess];
-	CarbonAppProcess * current = [CarbonAppProcess currentProcess];
-	if (![frontmost isEqual:current]) {
-		[[FocusManager sharedFocusManager] setSecondaryMainApp:[CarbonAppProcess frontmostProcess]];
-	}
+    [[ACConverterPool sharedPool] addConverterClass:[ACImageConverter class]];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
@@ -70,12 +58,10 @@
         ACConverter * converter = [[ACConverterPool sharedPool] converterForFile:newPath source:oldExt destination:newExt];
         NSLog(@"Converter: %@", converter);
         if (converter) {
-            NSImage * icon = [NSImage imageNamed:@"icon.png"];
+            NSImage * icon = [NSApp applicationIconImage];
             ACConfirmDialog * window = [[ACConfirmDialog alloc] initWithConverter:converter
                                                                                    icon:icon];
-            [[FocusManager sharedFocusManager] forceAppFocus];
             [window show];
-            //[[FocusManager sharedFocusManager] resignAppFocus];
         }
     }
 }

@@ -44,7 +44,7 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
                                       &context,
                                       pathsToWatch,
                                       kFSEventStreamEventIdSinceNow,
-                                      3,
+                                      1,
                                       kFSEventStreamCreateFlagFileEvents | kFSEventStreamCreateFlagNoDefer);
     FSEventStreamScheduleWithRunLoop(eventStream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
     FSEventStreamStart(eventStream);

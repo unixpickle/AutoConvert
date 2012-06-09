@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ACConverter.h"
-#import "FocusManager.h"
 #import "ACConversionsWindow.h"
+#import "ACFinderFocus.h"
 
 @interface ACConfirmDialog : NSWindow {
     ACConverter * converter;
@@ -19,6 +19,8 @@
     NSButton * okayButton;
     NSButton * cancelButton;
 }
+
++ (NSInteger)confirmDialogCount;
 
 - (id)initWithConverter:(ACConverter *)converter icon:(NSImage *)icon;
 - (void)show;

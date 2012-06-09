@@ -12,6 +12,10 @@ static NSMutableSet * conversionWindowList = nil;
 
 @implementation ACConfirmDialog
 
++ (NSInteger)confirmDialogCount {
+    return [conversionWindowList count];
+}
+
 - (id)initWithConverter:(ACConverter *)aConverter icon:(NSImage *)icon {
     if ((self = [super initWithContentRect:NSMakeRect(0, 0, 420, 138) styleMask:NSTitledWindowMask backing:NSBackingStoreBuffered defer:NO])) {
         converter = aConverter;
@@ -43,12 +47,16 @@ static NSMutableSet * conversionWindowList = nil;
         [okayButton setBezelStyle:NSRoundedBezelStyle];
         [okayButton setTitle:@"Convert"];
         [okayButton setFont:[NSFont systemFontOfSize:13]];
+        [okayButton setTarget:self];
+        [okayButton setAction:@selector(okayPressed:)];
         [self.contentView addSubview:okayButton];
         
         cancelButton = [[NSButton alloc] initWithFrame:NSMakeRect(self.frame.size.width - 250, 10, 130, 24)];
         [cancelButton setBezelStyle:NSRoundedBezelStyle];
         [cancelButton setTitle:@"Keep Format"];
         [cancelButton setFont:[NSFont systemFontOfSize:13]];
+        [cancelButton setTarget:self];
+        [cancelButton setAction:@selector(cancelPressed:)];
         [self.contentView addSubview:cancelButton];
         
         [self setDefaultButtonCell:[cancelButton cell]];
@@ -66,30 +74,36 @@ static NSMutableSet * conversionWindowList = nil;
     CGRect screen = NSRectToCGRect([[NSScreen mainScreen] frame]);
     NSRect frame = self.frame;
     NSPoint origin = NSMakePoint(CGRectGetMidX(screen) - frame.size.width / 2,
-                                 CGRectGetMidY(screen) - frame.size.height / 2);
+                                 CGRectGetMidY(screen) - frame.size.height / 2 + 205);
     frame.origin = origin;
     
-    NSRect startFrame = NSMakeRect(CGRectGetMidX(screen) - 2, CGRectGetMidY(screen) - 2, 4, 4);
+    NSRect startFrame = NSMakeRect(CGRectGetMidX(screen) - 2, CGRectGetMidY(screen) - 2 + 205, 4, 4);
     [self setFrame:startFrame display:YES];
     [self setAlphaValue:0];
     [self makeKeyAndOrderFront:self];
         
-    [[NSAnimationContext currentContext] setDuration:0.3];
+    [self.contentView setHidden:YES];
+    
+    [[NSAnimationContext currentContext] setDuration:0.25];
+    [[NSAnimationContext currentContext] setCompletionHandler:^{
+        [self.contentView setHidden:NO];
+    }];
     [NSAnimationContext beginGrouping];
     [[self animator] setAlphaValue:1];
     [[self animator] setFrame:frame display:YES animate:YES];
     [NSAnimationContext endGrouping];
+
+    [ACFinderFocus addOpenWindow:self];
 }
 
 - (void)orderOut:(id)sender {
+    [super orderOut:sender];
+    [ACFinderFocus removeOpenWindow:self];
     [conversionWindowList removeObject:self];
 }
 
 - (void)cancelPressed:(id)sender {
-    BOOL shouldResign = NO;
-    if ([conversionWindowList count] <= 1) shouldResign = YES;
     [self orderOut:self];
-    if (shouldResign) [[FocusManager sharedFocusManager] resignAppFocus];
 }
 
 - (void)okayPressed:(id)sender {

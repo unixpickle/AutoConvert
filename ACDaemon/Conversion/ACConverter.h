@@ -50,5 +50,6 @@ typedef void (^ACConverterCallback)(ACConverterCallbackType type, double progres
 - (BOOL)placeTempFile:(NSError **)error;
 
 - (void)convertSynchronously:(ACConverterCallback)callback;
+- (NSString *)conversionTitle;
 
 @end

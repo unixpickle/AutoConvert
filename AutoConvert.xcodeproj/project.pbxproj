@@ -25,16 +25,24 @@
 		FA771FA415812EC000A774D1 /* ACDaemon.app in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF3F15800D8E00D64D76 /* ACDaemon.app */; };
 		FA771FA91581378400A774D1 /* ACRenameWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FA81581378400A774D1 /* ACRenameWatcher.m */; };
 		FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FB3158147F300A774D1 /* CarbonAppProcess.m */; };
-		FA771FB7158147F300A774D1 /* FocusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FB5158147F300A774D1 /* FocusManager.m */; };
 		FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC015814ABA00A774D1 /* ACPathMatcher.m */; };
 		FA771FC415814AC700A774D1 /* ACPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC315814AC700A774D1 /* ACPath.m */; };
 		FA771FC8158224C700A774D1 /* ACConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC7158224C700A774D1 /* ACConverter.m */; };
-		FA771FCB15822A5B00A774D1 /* ACPNGJPGConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */; };
+		FA771FCB15822A5B00A774D1 /* ACImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCA15822A5B00A774D1 /* ACImageConverter.m */; };
 		FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCD15822D1500A774D1 /* ACConverterPool.m */; };
 		FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FD015827F4600A774D1 /* ScriptingBridge.framework */; };
 		FA771FD215827F6A00A774D1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF2115800D4900D64D76 /* AppKit.framework */; };
 		FA771FD615828F8B00A774D1 /* ACConfirmDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FD515828F8B00A774D1 /* ACConfirmDialog.m */; };
 		FA771FDF1582B81000A774D1 /* ACConversionsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FDE1582B81000A774D1 /* ACConversionsWindow.m */; };
+		FA771FE21582BA6700A774D1 /* ACConversionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FE11582BA6700A774D1 /* ACConversionView.m */; };
+		FA771FE71582BDF300A774D1 /* close1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771FE31582BDF300A774D1 /* close1.png */; };
+		FA771FE81582BDF300A774D1 /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771FE41582BDF300A774D1 /* close2.png */; };
+		FA771FE91582BDF300A774D1 /* close4.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771FE51582BDF300A774D1 /* close4.png */; };
+		FA771FEA1582BDF300A774D1 /* close3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771FE61582BDF300A774D1 /* close3.png */; };
+		FA771FED1582C5B200A774D1 /* ACCancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FEC1582C5B200A774D1 /* ACCancelButton.m */; };
+		FA771FF31582E3F300A774D1 /* ACMouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FF21582E3F200A774D1 /* ACMouseView.m */; };
+		FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FF51583A87D00A774D1 /* ACFinderFocus.m */; };
+		FA771FF81583B1F700A774D1 /* stolen icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA771FF71583B1F700A774D1 /* stolen icon.icns */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
@@ -72,16 +80,14 @@
 		FA771FA81581378400A774D1 /* ACRenameWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACRenameWatcher.m; sourceTree = "<group>"; };
 		FA771FB2158147F300A774D1 /* CarbonAppProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonAppProcess.h; sourceTree = "<group>"; };
 		FA771FB3158147F300A774D1 /* CarbonAppProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonAppProcess.m; sourceTree = "<group>"; };
-		FA771FB4158147F300A774D1 /* FocusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusManager.h; sourceTree = "<group>"; };
-		FA771FB5158147F300A774D1 /* FocusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusManager.m; sourceTree = "<group>"; };
 		FA771FBF15814ABA00A774D1 /* ACPathMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPathMatcher.h; sourceTree = "<group>"; };
 		FA771FC015814ABA00A774D1 /* ACPathMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathMatcher.m; sourceTree = "<group>"; };
 		FA771FC215814AC700A774D1 /* ACPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPath.h; sourceTree = "<group>"; };
 		FA771FC315814AC700A774D1 /* ACPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPath.m; sourceTree = "<group>"; };
 		FA771FC6158224C700A774D1 /* ACConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverter.h; sourceTree = "<group>"; };
 		FA771FC7158224C700A774D1 /* ACConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverter.m; sourceTree = "<group>"; };
-		FA771FC915822A5B00A774D1 /* ACPNGJPGConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPNGJPGConverter.h; sourceTree = "<group>"; };
-		FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPNGJPGConverter.m; sourceTree = "<group>"; };
+		FA771FC915822A5B00A774D1 /* ACImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACImageConverter.h; sourceTree = "<group>"; };
+		FA771FCA15822A5B00A774D1 /* ACImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACImageConverter.m; sourceTree = "<group>"; };
 		FA771FCC15822D1500A774D1 /* ACConverterPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverterPool.h; sourceTree = "<group>"; };
 		FA771FCD15822D1500A774D1 /* ACConverterPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverterPool.m; sourceTree = "<group>"; };
 		FA771FCF15827D5300A774D1 /* Finder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
@@ -90,6 +96,19 @@
 		FA771FD515828F8B00A774D1 /* ACConfirmDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConfirmDialog.m; sourceTree = "<group>"; };
 		FA771FDD1582B81000A774D1 /* ACConversionsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConversionsWindow.h; sourceTree = "<group>"; };
 		FA771FDE1582B81000A774D1 /* ACConversionsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConversionsWindow.m; sourceTree = "<group>"; };
+		FA771FE01582BA6700A774D1 /* ACConversionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConversionView.h; sourceTree = "<group>"; };
+		FA771FE11582BA6700A774D1 /* ACConversionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConversionView.m; sourceTree = "<group>"; };
+		FA771FE31582BDF300A774D1 /* close1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close1.png; sourceTree = "<group>"; };
+		FA771FE41582BDF300A774D1 /* close2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close2.png; sourceTree = "<group>"; };
+		FA771FE51582BDF300A774D1 /* close4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close4.png; sourceTree = "<group>"; };
+		FA771FE61582BDF300A774D1 /* close3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close3.png; sourceTree = "<group>"; };
+		FA771FEB1582C5B200A774D1 /* ACCancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCancelButton.h; sourceTree = "<group>"; };
+		FA771FEC1582C5B200A774D1 /* ACCancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCancelButton.m; sourceTree = "<group>"; };
+		FA771FF11582E3F200A774D1 /* ACMouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMouseView.h; sourceTree = "<group>"; };
+		FA771FF21582E3F200A774D1 /* ACMouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMouseView.m; sourceTree = "<group>"; };
+		FA771FF41583A87D00A774D1 /* ACFinderFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACFinderFocus.h; sourceTree = "<group>"; };
+		FA771FF51583A87D00A774D1 /* ACFinderFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACFinderFocus.m; sourceTree = "<group>"; };
+		FA771FF71583B1F700A774D1 /* stolen icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "stolen icon.icns"; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -208,6 +227,11 @@
 		FA73FF4315800D8E00D64D76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA771FF71583B1F700A774D1 /* stolen icon.icns */,
+				FA771FE31582BDF300A774D1 /* close1.png */,
+				FA771FE41582BDF300A774D1 /* close2.png */,
+				FA771FE61582BDF300A774D1 /* close3.png */,
+				FA771FE51582BDF300A774D1 /* close4.png */,
 				FA73FF4415800D8E00D64D76 /* ACDaemon-Info.plist */,
 				FA73FF4515800D8E00D64D76 /* InfoPlist.strings */,
 				FA73FF4815800D8E00D64D76 /* main.m */,
@@ -233,8 +257,8 @@
 				FA771FCF15827D5300A774D1 /* Finder.h */,
 				FA771FB2158147F300A774D1 /* CarbonAppProcess.h */,
 				FA771FB3158147F300A774D1 /* CarbonAppProcess.m */,
-				FA771FB4158147F300A774D1 /* FocusManager.h */,
-				FA771FB5158147F300A774D1 /* FocusManager.m */,
+				FA771FF41583A87D00A774D1 /* ACFinderFocus.h */,
+				FA771FF51583A87D00A774D1 /* ACFinderFocus.m */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -255,8 +279,8 @@
 			children = (
 				FA771FC6158224C700A774D1 /* ACConverter.h */,
 				FA771FC7158224C700A774D1 /* ACConverter.m */,
-				FA771FC915822A5B00A774D1 /* ACPNGJPGConverter.h */,
-				FA771FCA15822A5B00A774D1 /* ACPNGJPGConverter.m */,
+				FA771FC915822A5B00A774D1 /* ACImageConverter.h */,
+				FA771FCA15822A5B00A774D1 /* ACImageConverter.m */,
 				FA771FCC15822D1500A774D1 /* ACConverterPool.h */,
 				FA771FCD15822D1500A774D1 /* ACConverterPool.m */,
 			);
@@ -268,6 +292,12 @@
 			children = (
 				FA771FDD1582B81000A774D1 /* ACConversionsWindow.h */,
 				FA771FDE1582B81000A774D1 /* ACConversionsWindow.m */,
+				FA771FE01582BA6700A774D1 /* ACConversionView.h */,
+				FA771FE11582BA6700A774D1 /* ACConversionView.m */,
+				FA771FEB1582C5B200A774D1 /* ACCancelButton.h */,
+				FA771FEC1582C5B200A774D1 /* ACCancelButton.m */,
+				FA771FF11582E3F200A774D1 /* ACMouseView.h */,
+				FA771FF21582E3F200A774D1 /* ACMouseView.m */,
 			);
 			path = "Conversion UI";
 			sourceTree = "<group>";
@@ -368,6 +398,11 @@
 				FA73FF4715800D8E00D64D76 /* InfoPlist.strings in Resources */,
 				FA73FF4D15800D8E00D64D76 /* Credits.rtf in Resources */,
 				FA73FF5315800D8E00D64D76 /* MainMenu.xib in Resources */,
+				FA771FE71582BDF300A774D1 /* close1.png in Resources */,
+				FA771FE81582BDF300A774D1 /* close2.png in Resources */,
+				FA771FE91582BDF300A774D1 /* close4.png in Resources */,
+				FA771FEA1582BDF300A774D1 /* close3.png in Resources */,
+				FA771FF81583B1F700A774D1 /* stolen icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,14 +432,17 @@
 				FA73FF5C15800DB400D64D76 /* ACPreferences.m in Sources */,
 				FA771FA91581378400A774D1 /* ACRenameWatcher.m in Sources */,
 				FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */,
-				FA771FB7158147F300A774D1 /* FocusManager.m in Sources */,
 				FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */,
 				FA771FC415814AC700A774D1 /* ACPath.m in Sources */,
 				FA771FC8158224C700A774D1 /* ACConverter.m in Sources */,
-				FA771FCB15822A5B00A774D1 /* ACPNGJPGConverter.m in Sources */,
+				FA771FCB15822A5B00A774D1 /* ACImageConverter.m in Sources */,
 				FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */,
 				FA771FD615828F8B00A774D1 /* ACConfirmDialog.m in Sources */,
 				FA771FDF1582B81000A774D1 /* ACConversionsWindow.m in Sources */,
+				FA771FE21582BA6700A774D1 /* ACConversionView.m in Sources */,
+				FA771FED1582C5B200A774D1 /* ACCancelButton.m in Sources */,
+				FA771FF31582E3F300A774D1 /* ACMouseView.m in Sources */,
+				FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

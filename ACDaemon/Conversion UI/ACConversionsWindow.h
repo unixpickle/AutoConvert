@@ -7,10 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ACConverter.h"
+#import "ACConversionView.h"
+#import "ACFinderFocus.h"
 
-@interface ACConversionsWindow : NSWindow {
-    
+@interface ACConversionsWindow : NSWindow <ACConversionViewDelegate> {
+    NSMutableArray * conversionViews;
+    BOOL isVisible;
 }
 
 + (ACConversionsWindow *)sharedConversionsWindow;

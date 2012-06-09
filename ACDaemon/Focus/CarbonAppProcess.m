@@ -72,6 +72,15 @@
 	ShowHideProcess(&processSerial, hide^1);
 }
 
+- (BOOL)isFrontmost {
+    ProcessSerialNumber psn;
+    GetFrontProcess(&psn);
+    
+    Boolean result = FALSE;
+    SameProcess(&psn, &processSerial, &result);
+    return (BOOL)result;
+}
+
 - (BOOL)isEqual:(id)object {
 	if ([object isKindOfClass:[CarbonAppProcess class]]) {
 		ProcessSerialNumber mySerial = processSerial;

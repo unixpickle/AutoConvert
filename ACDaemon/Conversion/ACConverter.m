@@ -76,26 +76,39 @@
     callback(ACConverterCallbackTypeError, 0, error);
 }
 
+- (NSString *)conversionTitle {
+    return [NSString stringWithFormat:@"Converting %@ from \"%@\"",
+            [file lastPathComponent], sourceExtension];
+}
+
 #pragma mark - Private -
 
 - (void)runAsyncWithSync {
     @autoreleasepool {
+        __block BOOL reportedDone = NO;
         [self convertSynchronously:^(ACConverterCallbackType type, double progress, NSError *error) {
             if ([[NSThread currentThread] isCancelled]) return;
             if (type == ACConverterCallbackTypeDone) {
                 dispatch_async(mainQueue, ^{
                     [self informDelegateDone];
                 });
+                reportedDone = YES;
             } else if (type == ACConverterCallbackTypeError) {
                 dispatch_async(mainQueue, ^{
                     [self informDelegateError:error];
                 });
+                reportedDone = YES;
             } else if (type == ACConverterCallbackTypeProgress) {
                 dispatch_async(mainQueue, ^{
                     [self informDelegateProgress:progress];
                 });
             }
         }];
+        if (!reportedDone) {
+            dispatch_async(mainQueue, ^{
+                [self informDelegateDone];
+            });
+        }
         dispatch_async(mainQueue, ^{
             backgroundThread = nil;
             mainQueue = nil;
