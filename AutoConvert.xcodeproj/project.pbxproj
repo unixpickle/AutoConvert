@@ -27,7 +27,6 @@
 		FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FB3158147F300A774D1 /* CarbonAppProcess.m */; };
 		FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC015814ABA00A774D1 /* ACPathMatcher.m */; };
 		FA771FC415814AC700A774D1 /* ACPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC315814AC700A774D1 /* ACPath.m */; };
-		FA771FC8158224C700A774D1 /* ACConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FC7158224C700A774D1 /* ACConverter.m */; };
 		FA771FCB15822A5B00A774D1 /* ACImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCA15822A5B00A774D1 /* ACImageConverter.m */; };
 		FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FCD15822D1500A774D1 /* ACConverterPool.m */; };
 		FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FD015827F4600A774D1 /* ScriptingBridge.framework */; };
@@ -43,10 +42,60 @@
 		FA771FF31582E3F300A774D1 /* ACMouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FF21582E3F200A774D1 /* ACMouseView.m */; };
 		FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = FA771FF51583A87D00A774D1 /* ACFinderFocus.m */; };
 		FA771FF81583B1F700A774D1 /* stolen icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA771FF71583B1F700A774D1 /* stolen icon.icns */; };
+		FA771FFF1583D7F900A774D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
+		FA7720051583D7F900A774D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7720031583D7F900A774D1 /* InfoPlist.strings */; };
+		FA77200F1583D82100A774D1 /* ACConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77200D1583D82100A774D1 /* ACConverter.m */; };
+		FA7720101583D82100A774D1 /* ACConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = FA77200E1583D82100A774D1 /* ACConverter.h */; };
+		FA7720131583D85100A774D1 /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
+		FA77201B1583DA6700A774D1 /* ACPlugIn.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
+		FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77201D1583DB9600A774D1 /* ACBundleLoader.m */; };
+		FA77202F1583E46800A774D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA77202D1583E46800A774D1 /* InfoPlist.strings */; };
+		FA7720341583E47400A774D1 /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
+		FA7720371583E49500A774D1 /* BAAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7720361583E49500A774D1 /* BAAudioConverter.m */; };
+		FA7720381583E68300A774D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF2315800D4900D64D76 /* Foundation.framework */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA7720141583D85F00A774D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA73FF1115800D4900D64D76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA771FFD1583D7F900A774D1;
+			remoteInfo = ACPlugIn;
+		};
+		FA7720161583D86600A774D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA73FF1115800D4900D64D76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA73FF3E15800D8E00D64D76;
+			remoteInfo = ACDaemon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA77201A1583DA6100A774D1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA77201B1583DA6700A774D1 /* ACPlugIn.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7720211583E33E00A774D1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA73FF1A15800D4900D64D76 /* AutoConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,8 +133,6 @@
 		FA771FC015814ABA00A774D1 /* ACPathMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathMatcher.m; sourceTree = "<group>"; };
 		FA771FC215814AC700A774D1 /* ACPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPath.h; sourceTree = "<group>"; };
 		FA771FC315814AC700A774D1 /* ACPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPath.m; sourceTree = "<group>"; };
-		FA771FC6158224C700A774D1 /* ACConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverter.h; sourceTree = "<group>"; };
-		FA771FC7158224C700A774D1 /* ACConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverter.m; sourceTree = "<group>"; };
 		FA771FC915822A5B00A774D1 /* ACImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACImageConverter.h; sourceTree = "<group>"; };
 		FA771FCA15822A5B00A774D1 /* ACImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACImageConverter.m; sourceTree = "<group>"; };
 		FA771FCC15822D1500A774D1 /* ACConverterPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverterPool.h; sourceTree = "<group>"; };
@@ -109,6 +156,21 @@
 		FA771FF41583A87D00A774D1 /* ACFinderFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACFinderFocus.h; sourceTree = "<group>"; };
 		FA771FF51583A87D00A774D1 /* ACFinderFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACFinderFocus.m; sourceTree = "<group>"; };
 		FA771FF71583B1F700A774D1 /* stolen icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "stolen icon.icns"; sourceTree = "<group>"; };
+		FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPlugIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7720021583D7F900A774D1 /* ACPlugIn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ACPlugIn-Info.plist"; sourceTree = "<group>"; };
+		FA7720041583D7F900A774D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA7720061583D7F900A774D1 /* ACPlugIn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACPlugIn-Prefix.pch"; sourceTree = "<group>"; };
+		FA77200D1583D82100A774D1 /* ACConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverter.m; sourceTree = "<group>"; };
+		FA77200E1583D82100A774D1 /* ACConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverter.h; sourceTree = "<group>"; };
+		FA77201C1583DB9600A774D1 /* ACBundleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACBundleLoader.h; sourceTree = "<group>"; };
+		FA77201D1583DB9600A774D1 /* ACBundleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACBundleLoader.m; sourceTree = "<group>"; };
+		FA7720271583E46700A774D1 /* BasicAudio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAudio.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7720281583E46800A774D1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FA77202C1583E46800A774D1 /* BasicAudio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicAudio-Info.plist"; sourceTree = "<group>"; };
+		FA77202E1583E46800A774D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA7720301583E46800A774D1 /* BasicAudio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicAudio-Prefix.pch"; sourceTree = "<group>"; };
+		FA7720351583E49500A774D1 /* BAAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAudioConverter.h; sourceTree = "<group>"; };
+		FA7720361583E49500A774D1 /* BAAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAudioConverter.m; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -133,6 +195,24 @@
 				FA771FD215827F6A00A774D1 /* AppKit.framework in Frameworks */,
 				FA771FD115827F4600A774D1 /* ScriptingBridge.framework in Frameworks */,
 				FA73FF4115800D8E00D64D76 /* Cocoa.framework in Frameworks */,
+				FA7720131583D85100A774D1 /* ACPlugIn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA771FFA1583D7F900A774D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA771FFF1583D7F900A774D1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7720241583E46700A774D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7720381583E68300A774D1 /* Foundation.framework in Frameworks */,
+				FA7720341583E47400A774D1 /* ACPlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +226,8 @@
 				FA73FF5815800DA800D64D76 /* Shared */,
 				FA73FF2415800D4900D64D76 /* AutoConvert */,
 				FA73FF4215800D8E00D64D76 /* ACDaemon */,
+				FA7720001583D7F900A774D1 /* ACPlugIn */,
+				FA77202A1583E46800A774D1 /* BasicAudio */,
 				FA73FF1D15800D4900D64D76 /* Frameworks */,
 				FA73FF1B15800D4900D64D76 /* Products */,
 			);
@@ -156,6 +238,8 @@
 			children = (
 				FA73FF1A15800D4900D64D76 /* AutoConvert.app */,
 				FA73FF3F15800D8E00D64D76 /* ACDaemon.app */,
+				FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */,
+				FA7720271583E46700A774D1 /* BasicAudio.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +249,7 @@
 			children = (
 				FA771FD015827F4600A774D1 /* ScriptingBridge.framework */,
 				FA73FF1E15800D4900D64D76 /* Cocoa.framework */,
+				FA7720281583E46800A774D1 /* CoreFoundation.framework */,
 				FA73FF2015800D4900D64D76 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -277,12 +362,12 @@
 		FA771FC5158224B900A774D1 /* Conversion */ = {
 			isa = PBXGroup;
 			children = (
-				FA771FC6158224C700A774D1 /* ACConverter.h */,
-				FA771FC7158224C700A774D1 /* ACConverter.m */,
 				FA771FC915822A5B00A774D1 /* ACImageConverter.h */,
 				FA771FCA15822A5B00A774D1 /* ACImageConverter.m */,
 				FA771FCC15822D1500A774D1 /* ACConverterPool.h */,
 				FA771FCD15822D1500A774D1 /* ACConverterPool.m */,
+				FA77201C1583DB9600A774D1 /* ACBundleLoader.h */,
+				FA77201D1583DB9600A774D1 /* ACBundleLoader.m */,
 			);
 			path = Conversion;
 			sourceTree = "<group>";
@@ -302,6 +387,46 @@
 			path = "Conversion UI";
 			sourceTree = "<group>";
 		};
+		FA7720001583D7F900A774D1 /* ACPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				FA77200E1583D82100A774D1 /* ACConverter.h */,
+				FA77200D1583D82100A774D1 /* ACConverter.m */,
+				FA7720011583D7F900A774D1 /* Supporting Files */,
+			);
+			path = ACPlugIn;
+			sourceTree = "<group>";
+		};
+		FA7720011583D7F900A774D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA7720021583D7F900A774D1 /* ACPlugIn-Info.plist */,
+				FA7720031583D7F900A774D1 /* InfoPlist.strings */,
+				FA7720061583D7F900A774D1 /* ACPlugIn-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA77202A1583E46800A774D1 /* BasicAudio */ = {
+			isa = PBXGroup;
+			children = (
+				FA7720351583E49500A774D1 /* BAAudioConverter.h */,
+				FA7720361583E49500A774D1 /* BAAudioConverter.m */,
+				FA77202B1583E46800A774D1 /* Supporting Files */,
+			);
+			path = BasicAudio;
+			sourceTree = "<group>";
+		};
+		FA77202B1583E46800A774D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA77202C1583E46800A774D1 /* BasicAudio-Info.plist */,
+				FA77202D1583E46800A774D1 /* InfoPlist.strings */,
+				FA7720301583E46800A774D1 /* BasicAudio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FAF980481580F81200C25EF0 /* ANControlBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +442,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FA771FFB1583D7F900A774D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7720101583D82100A774D1 /* ACConverter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		FA73FF1915800D4900D64D76 /* AutoConvert */ = {
 			isa = PBXNativeTarget;
@@ -329,6 +465,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FA7720171583D86600A774D1 /* PBXTargetDependency */,
 			);
 			name = AutoConvert;
 			productName = AutoConvert;
@@ -342,15 +479,54 @@
 				FA73FF3B15800D8E00D64D76 /* Sources */,
 				FA73FF3C15800D8E00D64D76 /* Frameworks */,
 				FA73FF3D15800D8E00D64D76 /* Resources */,
+				FA77201A1583DA6100A774D1 /* CopyFiles */,
+				FA7720221583E37700A774D1 /* ShellScript */,
+				FA7720211583E33E00A774D1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA7720151583D85F00A774D1 /* PBXTargetDependency */,
 			);
 			name = ACDaemon;
 			productName = ACDaemon;
 			productReference = FA73FF3F15800D8E00D64D76 /* ACDaemon.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FA771FFD1583D7F900A774D1 /* ACPlugIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA77200A1583D7FA00A774D1 /* Build configuration list for PBXNativeTarget "ACPlugIn" */;
+			buildPhases = (
+				FA771FF91583D7F900A774D1 /* Sources */,
+				FA771FFA1583D7F900A774D1 /* Frameworks */,
+				FA771FFB1583D7F900A774D1 /* Headers */,
+				FA771FFC1583D7F900A774D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACPlugIn;
+			productName = ACPlugIn;
+			productReference = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA7720261583E46700A774D1 /* BasicAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7720311583E46800A774D1 /* Build configuration list for PBXNativeTarget "BasicAudio" */;
+			buildPhases = (
+				FA7720231583E46700A774D1 /* Sources */,
+				FA7720241583E46700A774D1 /* Frameworks */,
+				FA7720251583E46700A774D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicAudio;
+			productName = BasicAudio;
+			productReference = FA7720271583E46700A774D1 /* BasicAudio.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -375,6 +551,8 @@
 			targets = (
 				FA73FF1915800D4900D64D76 /* AutoConvert */,
 				FA73FF3E15800D8E00D64D76 /* ACDaemon */,
+				FA771FFD1583D7F900A774D1 /* ACPlugIn */,
+				FA7720261583E46700A774D1 /* BasicAudio */,
 			);
 		};
 /* End PBXProject section */
@@ -406,7 +584,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA771FFC1583D7F900A774D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7720051583D7F900A774D1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7720251583E46700A774D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77202F1583E46800A774D1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA7720221583E37700A774D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "pPath=`dirname ${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}`/../PlugIns\nif [ ! -d \"$pPath\" ]; then\n    mkdir \"$pPath\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA73FF1615800D4900D64D76 /* Sources */ = {
@@ -434,7 +644,6 @@
 				FA771FB6158147F300A774D1 /* CarbonAppProcess.m in Sources */,
 				FA771FC115814ABA00A774D1 /* ACPathMatcher.m in Sources */,
 				FA771FC415814AC700A774D1 /* ACPath.m in Sources */,
-				FA771FC8158224C700A774D1 /* ACConverter.m in Sources */,
 				FA771FCB15822A5B00A774D1 /* ACImageConverter.m in Sources */,
 				FA771FCE15822D1500A774D1 /* ACConverterPool.m in Sources */,
 				FA771FD615828F8B00A774D1 /* ACConfirmDialog.m in Sources */,
@@ -443,10 +652,40 @@
 				FA771FED1582C5B200A774D1 /* ACCancelButton.m in Sources */,
 				FA771FF31582E3F300A774D1 /* ACMouseView.m in Sources */,
 				FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */,
+				FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA771FF91583D7F900A774D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA77200F1583D82100A774D1 /* ACConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7720231583E46700A774D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7720371583E49500A774D1 /* BAAudioConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA7720151583D85F00A774D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA771FFD1583D7F900A774D1 /* ACPlugIn */;
+			targetProxy = FA7720141583D85F00A774D1 /* PBXContainerItemProxy */;
+		};
+		FA7720171583D86600A774D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA73FF3E15800D8E00D64D76 /* ACDaemon */;
+			targetProxy = FA7720161583D86600A774D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA73FF2715800D4900D64D76 /* InfoPlist.strings */ = {
@@ -495,6 +734,22 @@
 				FA73FF5215800D8E00D64D76 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FA7720031583D7F900A774D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7720041583D7F900A774D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA77202D1583E46800A774D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA77202E1583E46800A774D1 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,6 +829,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACDaemon/ACDaemon-Prefix.pch";
+				IBC_OVERRIDING_PLUGINS_AND_FRAMEWORKS_DIR = "";
 				INFOPLIST_FILE = "ACDaemon/ACDaemon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -585,9 +841,64 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ACDaemon/ACDaemon-Prefix.pch";
+				IBC_OVERRIDING_PLUGINS_AND_FRAMEWORKS_DIR = "";
 				INFOPLIST_FILE = "ACDaemon/ACDaemon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FA77200B1583D7FA00A774D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACPlugIn/ACPlugIn-Prefix.pch";
+				INFOPLIST_FILE = "ACPlugIn/ACPlugIn-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		FA77200C1583D7FA00A774D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACPlugIn/ACPlugIn-Prefix.pch";
+				INFOPLIST_FILE = "ACPlugIn/ACPlugIn-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		FA7720321583E46800A774D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicAudio/BasicAudio-Prefix.pch";
+				INFOPLIST_FILE = "BasicAudio/BasicAudio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FA7720331583E46800A774D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicAudio/BasicAudio-Prefix.pch";
+				INFOPLIST_FILE = "BasicAudio/BasicAudio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -620,6 +931,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FA77200A1583D7FA00A774D1 /* Build configuration list for PBXNativeTarget "ACPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77200B1583D7FA00A774D1 /* Debug */,
+				FA77200C1583D7FA00A774D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA7720311583E46800A774D1 /* Build configuration list for PBXNativeTarget "BasicAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7720321583E46800A774D1 /* Debug */,
+				FA7720331583E46800A774D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

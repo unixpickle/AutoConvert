@@ -87,7 +87,7 @@
 
 - (void)converter:(ACConverter *)converter progressUpdate:(float)progress {
     [progressIndicator setDoubleValue:progress];
-    NSString * status = [NSString stringWithFormat:@"%d%% complete", round(progress * 100)];
+    NSString * status = [NSString stringWithFormat:@"%d%% complete", (int)round(progress * 100.0f)];
     [subtitleLabel setStringValue:status];
 }
 

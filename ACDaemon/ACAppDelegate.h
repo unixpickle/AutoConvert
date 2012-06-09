@@ -15,6 +15,7 @@
 
 #import "ACConverterPool.h"
 #import "ACImageConverter.h"
+#import "ACBundleLoader.h"
 
 @interface ACAppDelegate : NSObject <NSApplicationDelegate, ACDaemonInterface, ACRenameWatcherDelegate> {
     NSConnection * connection;

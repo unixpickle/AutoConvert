@@ -29,6 +29,7 @@
     [watcher startWatching];
     
     [[ACConverterPool sharedPool] addConverterClass:[ACImageConverter class]];
+    [ACBundleLoader loadAllPlugIns];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
