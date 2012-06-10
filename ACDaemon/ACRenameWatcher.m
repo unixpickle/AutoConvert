@@ -72,20 +72,36 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
                                     void * eventPaths,
                                     const FSEventStreamEventFlags eventFlags[],
                                     const FSEventStreamEventId eventIds[]) {
-    NSMutableDictionary * pathsForIds = [NSMutableDictionary dictionary];
+    static NSMutableDictionary * pathsForIds = nil;
+    if (!pathsForIds) {
+        pathsForIds = [NSMutableDictionary new];
+    }
     
     ACRenameWatcher * watcher = (__bridge ACRenameWatcher *)clientCallBackInfo;
     for (size_t i = 0; i < numEvents; i++) {
+        NSNumber * testID = [NSNumber numberWithUnsignedLongLong:(eventIds[i] - 1)];
+        NSNumber * otherTestID = [NSNumber numberWithUnsignedLongLong:(eventIds[i] + 1)];
         if ((eventFlags[i] & kFSEventStreamEventFlagItemRenamed) == 0) {
+            if ([pathsForIds objectForKey:testID]) {
+                [pathsForIds removeObjectForKey:testID];
+            }
+            if ([pathsForIds objectForKey:otherTestID]) {
+                [pathsForIds removeObjectForKey:otherTestID];
+            }
             continue;
         }
         NSString * path = [NSString stringWithUTF8String:((char **)eventPaths)[i]];
-        NSNumber * testID = [NSNumber numberWithUnsignedLongLong:(eventIds[i] - 1)];
         if ([pathsForIds objectForKey:testID]) {
             NSString * oldPath = [pathsForIds objectForKey:testID];
             [watcher pathMoved:oldPath toPath:path];
+            [pathsForIds removeObjectForKey:testID];
+        } else if ([pathsForIds objectForKey:otherTestID]) {
+            NSString * newPath = [pathsForIds objectForKey:otherTestID];
+            [watcher pathMoved:path toPath:newPath];
+            [pathsForIds removeObjectForKey:otherTestID];
+        } else {
+            [pathsForIds setObject:path
+                            forKey:[NSNumber numberWithUnsignedLongLong:eventIds[i]]];
         }
-        [pathsForIds setObject:path
-                        forKey:[NSNumber numberWithUnsignedLongLong:eventIds[i]]];
     }
 }
