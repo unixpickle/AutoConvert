@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA68FD90158516CC0044AA9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
+		FA68FD96158516CC0044AA9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA68FD94158516CC0044AA9A /* InfoPlist.strings */; };
+		FA68FD9B158516D60044AA9A /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
+		FA68FD9E158516E10044AA9A /* BasicAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68FD9D158516E10044AA9A /* BasicAudio.m */; };
+		FA68FD9F1585171D0044AA9A /* BasicAudio.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */; };
+		FA68FDA31585173D0044AA9A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68FDA21585173D0044AA9A /* AudioToolbox.framework */; };
 		FA73FF1F15800D4900D64D76 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
 		FA73FF2915800D4900D64D76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA73FF2715800D4900D64D76 /* InfoPlist.strings */; };
 		FA73FF2B15800D4900D64D76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73FF2A15800D4900D64D76 /* main.m */; };
@@ -55,6 +61,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA68FDA0158517240044AA9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA73FF1115800D4900D64D76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA68FD8E158516CC0044AA9A;
+			remoteInfo = BasicAudio;
+		};
 		FA7720141583D85F00A774D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA73FF1115800D4900D64D76 /* Project object */;
@@ -88,12 +101,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				FA68FD9F1585171D0044AA9A /* BasicAudio.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAudio.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA68FD93158516CC0044AA9A /* BasicAudio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicAudio-Info.plist"; sourceTree = "<group>"; };
+		FA68FD95158516CC0044AA9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA68FD97158516CC0044AA9A /* BasicAudio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicAudio-Prefix.pch"; sourceTree = "<group>"; };
+		FA68FD9C158516E10044AA9A /* BasicAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAudio.h; sourceTree = "<group>"; };
+		FA68FD9D158516E10044AA9A /* BasicAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAudio.m; sourceTree = "<group>"; };
+		FA68FDA21585173D0044AA9A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA73FF1A15800D4900D64D76 /* AutoConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA73FF1E15800D4900D64D76 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FA73FF2115800D4900D64D76 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -170,6 +191,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA68FD8C158516CC0044AA9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA68FDA31585173D0044AA9A /* AudioToolbox.framework in Frameworks */,
+				FA68FD90158516CC0044AA9A /* Cocoa.framework in Frameworks */,
+				FA68FD9B158516D60044AA9A /* ACPlugIn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA73FF1715800D4900D64D76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +231,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA68FD91158516CC0044AA9A /* BasicAudio */ = {
+			isa = PBXGroup;
+			children = (
+				FA68FD9C158516E10044AA9A /* BasicAudio.h */,
+				FA68FD9D158516E10044AA9A /* BasicAudio.m */,
+				FA68FD92158516CC0044AA9A /* Supporting Files */,
+			);
+			path = BasicAudio;
+			sourceTree = "<group>";
+		};
+		FA68FD92158516CC0044AA9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA68FD93158516CC0044AA9A /* BasicAudio-Info.plist */,
+				FA68FD94158516CC0044AA9A /* InfoPlist.strings */,
+				FA68FD97158516CC0044AA9A /* BasicAudio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FA73FF0F15800D4900D64D76 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +259,7 @@
 				FA73FF2415800D4900D64D76 /* AutoConvert */,
 				FA73FF4215800D8E00D64D76 /* ACDaemon */,
 				FA7720001583D7F900A774D1 /* ACPlugIn */,
+				FA68FD91158516CC0044AA9A /* BasicAudio */,
 				FA73FF1D15800D4900D64D76 /* Frameworks */,
 				FA73FF1B15800D4900D64D76 /* Products */,
 			);
@@ -219,6 +271,7 @@
 				FA73FF1A15800D4900D64D76 /* AutoConvert.app */,
 				FA73FF3F15800D8E00D64D76 /* ACDaemon.app */,
 				FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */,
+				FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +279,7 @@
 		FA73FF1D15800D4900D64D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA68FDA21585173D0044AA9A /* AudioToolbox.framework */,
 				FA771FD015827F4600A774D1 /* ScriptingBridge.framework */,
 				FA73FF1E15800D4900D64D76 /* Cocoa.framework */,
 				FA7720281583E46800A774D1 /* CoreFoundation.framework */,
@@ -413,6 +467,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FA68FD8E158516CC0044AA9A /* BasicAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA68FD98158516CC0044AA9A /* Build configuration list for PBXNativeTarget "BasicAudio" */;
+			buildPhases = (
+				FA68FD8B158516CC0044AA9A /* Sources */,
+				FA68FD8C158516CC0044AA9A /* Frameworks */,
+				FA68FD8D158516CC0044AA9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicAudio;
+			productName = BasicAudio;
+			productReference = FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		FA73FF1915800D4900D64D76 /* AutoConvert */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA73FF3815800D4900D64D76 /* Build configuration list for PBXNativeTarget "AutoConvert" */;
@@ -446,6 +517,7 @@
 			);
 			dependencies = (
 				FA7720151583D85F00A774D1 /* PBXTargetDependency */,
+				FA68FDA1158517240044AA9A /* PBXTargetDependency */,
 			);
 			name = ACDaemon;
 			productName = ACDaemon;
@@ -494,11 +566,20 @@
 				FA73FF1915800D4900D64D76 /* AutoConvert */,
 				FA73FF3E15800D8E00D64D76 /* ACDaemon */,
 				FA771FFD1583D7F900A774D1 /* ACPlugIn */,
+				FA68FD8E158516CC0044AA9A /* BasicAudio */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA68FD8D158516CC0044AA9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA68FD96158516CC0044AA9A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA73FF1815800D4900D64D76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,6 +633,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA68FD8B158516CC0044AA9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA68FD9E158516E10044AA9A /* BasicAudio.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA73FF1615800D4900D64D76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,6 +689,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA68FDA1158517240044AA9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA68FD8E158516CC0044AA9A /* BasicAudio */;
+			targetProxy = FA68FDA0158517240044AA9A /* PBXContainerItemProxy */;
+		};
 		FA7720151583D85F00A774D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA771FFD1583D7F900A774D1 /* ACPlugIn */;
@@ -613,6 +707,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA68FD94158516CC0044AA9A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA68FD95158516CC0044AA9A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FA73FF2715800D4900D64D76 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -672,6 +774,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA68FD99158516CC0044AA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicAudio/BasicAudio-Prefix.pch";
+				INFOPLIST_FILE = "BasicAudio/BasicAudio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FA68FD9A158516CC0044AA9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicAudio/BasicAudio-Prefix.pch";
+				INFOPLIST_FILE = "BasicAudio/BasicAudio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		FA73FF3615800D4900D64D76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -798,6 +924,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA68FD98158516CC0044AA9A /* Build configuration list for PBXNativeTarget "BasicAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA68FD99158516CC0044AA9A /* Debug */,
+				FA68FD9A158516CC0044AA9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FA73FF1415800D4900D64D76 /* Build configuration list for PBXProject "AutoConvert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -832,6 +966,7 @@
 				FA77200C1583D7FA00A774D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
