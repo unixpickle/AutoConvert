@@ -199,7 +199,7 @@
         }
         
         UInt32 framesRead = bufferSizeInFrames;
-        err = ExtAudioFileRead(inputFile, &framesRead, &bufferList );
+        err = ExtAudioFileRead(inputFile, &framesRead, &bufferList);
         if (err != noErr) {
             callback(ACConverterCallbackTypeError, 0, [NSError errorWithDomain:@"ExtAudioFileRead"
                                                                           code:err
