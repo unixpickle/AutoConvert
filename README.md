@@ -14,7 +14,9 @@ I (Alex Nichol) have completely finished implementing the basic backbone of this
 
 I have written a simple plug-in for audio conversion called `BasicAudio`.  This plug-in compiles as part of the ACDaemon target; the ACDaemon target will even copy the compiled bundle to the product's `PlugIns` directory.  This plug-in shows off all of the basic features of AutoConvert: the progress indicator, live cancelling, support for various extensions in one plug-in, etc.
 
-I plan to implement a more advanced audio plug-in as well.  This will probably use LAME for MP3 encoding (CoreAudio cannot encode MPEG layers 1, 2, or 3).  On top of this, I will also search for a library for FLAC encoding/decoding; otherwise, I will implement FLAC myself (how hard could it be?).
+I have now implemented a plug-in which uses LAME to encode MP3 files, namely [BasicMP3](https://github.com/unixpickle/BasicMP3).  This plug-in comes pre-compiled as a bundle in the AutoConvert project; the source is not included in this repository for licensing reasons.  I still plan to implement a plug-in for FLAC encoding/decoding. However, I may do this down the road, since my top priority is currently video conversion.
+
+For video conversion, my current plan is to encapsulate the ffmpeg library in order to transcode video across different formats and containers.  This plug-in will be rather massive, and may take a significant amount of time to be completed.  However, once this is complete, it will be easier than ever to convert between mkv, mov, m4v, mpg, avi, and many other video formats.
 
 License
 =======
