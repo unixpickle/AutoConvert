@@ -86,9 +86,10 @@
     int seconds = (int)round((runningTime / (double)_progress) - runningTime);
     int hours = seconds / 60 / 60;
     int minutes = (seconds / 60) % 60;
+    int secondsRemaining = seconds % 60;
     NSString * timeString = nil;
-    if (hours > 0) timeString = [NSString stringWithFormat:@"%d:%02d:%02d", hours, minutes, seconds];
-    else if (minutes > 0) timeString = [NSString stringWithFormat:@"%d:%02d", minutes, seconds];
+    if (hours > 0) timeString = [NSString stringWithFormat:@"%d:%02d:%02d", hours, minutes, secondsRemaining];
+    else if (minutes > 0) timeString = [NSString stringWithFormat:@"%d:%02d", minutes, secondsRemaining];
     else timeString = [NSString stringWithFormat:@"%d seconds", seconds];
     return [NSString stringWithFormat:@"%d%% - %@ remaining", (int)round(_progress * 100), timeString];
 }
