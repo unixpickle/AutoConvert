@@ -92,6 +92,7 @@
 }
 
 - (void)converter:(ACConverter *)aConverter failedWithError:(NSError *)error {
+    NSLog(@"Conversion error: %@", error);
     okayButton = [[NSButton alloc] initWithFrame:NSMakeRect(self.frame.size.width - 106, 10, 96, 20)];
     [okayButton.cell setControlSize:NSSmallControlSize]; 
     [okayButton setBezelStyle:NSRoundedBezelStyle];

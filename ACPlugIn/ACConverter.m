@@ -81,12 +81,18 @@
             [file lastPathComponent], sourceExtension];
 }
 
+- (NSString *)conversionSubtitle {
+    float percentPerTime = (float)((double)_progress / [[NSDate date] timeIntervalSinceDate:startDate]);
+    return [NSString stringWithFormat:@"%@ seconds remaining", roundf(1.0 / percentPerTime)];
+}
+
 #pragma mark - Private -
 
 - (void)runAsyncWithSync {
     @autoreleasepool {
+        startDate = [NSDate date];
         __block BOOL reportedDone = NO;
-        [self convertSynchronously:^(ACConverterCallbackType type, double progress, NSError *error) {
+        [self convertSynchronously:^(ACConverterCallbackType type, double theProgress, NSError *error) {
             if ([[NSThread currentThread] isCancelled]) return;
             if (type == ACConverterCallbackTypeDone) {
                 dispatch_async(mainQueue, ^{
@@ -99,8 +105,9 @@
                 });
                 reportedDone = YES;
             } else if (type == ACConverterCallbackTypeProgress) {
+                _progress = theProgress;
                 dispatch_async(mainQueue, ^{
-                    [self informDelegateProgress:progress];
+                    [self informDelegateProgress:_progress];
                 });
             }
         }];
