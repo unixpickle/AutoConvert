@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA5D5394158B6827001307AD /* BasicMP3.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA5D5392158B681E001307AD /* BasicMP3.bundle */; };
+		FA5D53A1158B6B1E001307AD /* BasicMP3.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA5D53A0158B6B1A001307AD /* BasicMP3.bundle */; };
 		FA68FD90158516CC0044AA9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
 		FA68FD96158516CC0044AA9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA68FD94158516CC0044AA9A /* InfoPlist.strings */; };
 		FA68FD9B158516D60044AA9A /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
@@ -103,14 +103,14 @@
 			dstSubfolderSpec = 13;
 			files = (
 				FA68FD9F1585171D0044AA9A /* BasicAudio.bundle in CopyFiles */,
-				FA5D5394158B6827001307AD /* BasicMP3.bundle in CopyFiles */,
+				FA5D53A1158B6B1E001307AD /* BasicMP3.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA5D5392158B681E001307AD /* BasicMP3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BasicMP3.bundle; sourceTree = "<group>"; };
+		FA5D53A0158B6B1A001307AD /* BasicMP3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BasicMP3.bundle; sourceTree = "<group>"; };
 		FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAudio.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA68FD93158516CC0044AA9A /* BasicAudio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicAudio-Info.plist"; sourceTree = "<group>"; };
 		FA68FD95158516CC0044AA9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -348,7 +348,7 @@
 		FA73FF4315800D8E00D64D76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA5D5392158B681E001307AD /* BasicMP3.bundle */,
+				FA5D53A0158B6B1A001307AD /* BasicMP3.bundle */,
 				FA771FF71583B1F700A774D1 /* stolen icon.icns */,
 				FA771FE31582BDF300A774D1 /* close1.png */,
 				FA771FE41582BDF300A774D1 /* close2.png */,

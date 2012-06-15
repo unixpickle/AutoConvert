@@ -85,10 +85,9 @@
 
 #pragma mark - Converter -
 
-- (void)converter:(ACConverter *)converter progressUpdate:(float)progress {
+- (void)converter:(ACConverter *)aConverter progressUpdate:(float)progress {
     [progressIndicator setDoubleValue:progress];
-    NSString * status = [NSString stringWithFormat:@"%d%% complete", (int)round(progress * 100.0f)];
-    [subtitleLabel setStringValue:status];
+    [subtitleLabel setStringValue:[converter conversionSubtitle]];
 }
 
 - (void)converter:(ACConverter *)aConverter failedWithError:(NSError *)error {

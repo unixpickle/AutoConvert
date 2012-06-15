@@ -82,8 +82,15 @@
 }
 
 - (NSString *)conversionSubtitle {
-    float percentPerTime = (float)((double)_progress / [[NSDate date] timeIntervalSinceDate:startDate]);
-    return [NSString stringWithFormat:@"%@ seconds remaining", roundf(1.0 / percentPerTime)];
+    NSTimeInterval runningTime = [[NSDate date] timeIntervalSinceDate:startDate];
+    int seconds = (int)round((runningTime / (double)_progress) - runningTime);
+    int hours = seconds / 60 / 60;
+    int minutes = (seconds / 60) % 60;
+    NSString * timeString = nil;
+    if (hours > 0) timeString = [NSString stringWithFormat:@"%d:%02d:%02d", hours, minutes, seconds];
+    else if (minutes > 0) timeString = [NSString stringWithFormat:@"%d:%02d", minutes, seconds];
+    else timeString = [NSString stringWithFormat:@"%d seconds", seconds];
+    return [NSString stringWithFormat:@"%d%% - %@ remaining", (int)round(_progress * 100), timeString];
 }
 
 #pragma mark - Private -
