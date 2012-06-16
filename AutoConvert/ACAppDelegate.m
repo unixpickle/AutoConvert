@@ -89,12 +89,15 @@
 - (IBAction)launchDaemon:(id)sender {
     if ([daemonWatcher isDaemonRunning]) {
         [daemonWatcher terminateDaemon];
+        if ([daemonWatcher isDaemonRunning]) [launchButton setEnabled:NO];
     } else {
         [daemonWatcher executeDaemon];
+        if (![daemonWatcher isDaemonRunning]) [launchButton setEnabled:NO];
     }
 }
 
 - (void)daemonStatusChanged:(NSNotification *)notification {
+    [launchButton setEnabled:YES];
     if ([daemonWatcher isDaemonRunning]) {
         [launchButton setTitle:@"Terminate Daemon"];
     } else {

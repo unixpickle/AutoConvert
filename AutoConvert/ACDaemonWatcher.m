@@ -106,13 +106,6 @@
 - (void)terminateDaemon {
     if (!activeConnection) return;
     [[self connectedProxy] terminate];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:NSPortDidBecomeInvalidNotification
-                                                  object:nil];
-    activeConnection = nil;
-    [[NSNotificationCenter defaultCenter] postNotificationName:ACDaemonWatcherRunningChangedNotification
-                                                        object:self];
-    [self beginWatchingConnections];
 }
 
 @end
