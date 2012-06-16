@@ -17,6 +17,7 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
 
 @interface ACRenameWatcher (Private)
 
+- (void)gotEventID:(FSEventStreamEventId)eventID path:(NSString *)thePath;
 - (void)pathMoved:(NSString *)old toPath:(NSString *)new;
 
 @end
@@ -28,6 +29,7 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
 - (id)initWithPath:(NSString *)aPath {
     if ((self = [super init])) {
         path = aPath;
+        pathHistory = [[ACPathHistory alloc] init];
     }
     return self;
 }
@@ -58,6 +60,21 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
     eventStream = NULL;
 }
 
+- (void)gotEventID:(FSEventStreamEventId)eventID path:(NSString *)thePath {
+    if ([pathHistory pathForEventID:(eventID - 1)]) {
+        NSString * oldPath = [pathHistory pathForEventID:(eventID - 1)];
+        [self pathMoved:oldPath toPath:thePath];
+        [pathHistory removePathForEventID:(eventID - 1)];
+    } else if ([pathHistory pathForEventID:(eventID + 1)]) {
+        NSString * newPath = [pathHistory pathForEventID:(eventID + 1)];
+        [self pathMoved:thePath toPath:newPath];
+        [pathHistory removePathForEventID:(eventID + 1)];
+    } else {
+        [pathHistory setPath:thePath forEventID:eventID];
+    }
+    [pathHistory deleteOldEvents:256];
+}
+
 - (void)pathMoved:(NSString *)old toPath:(NSString *)new {
     if ([delegate respondsToSelector:@selector(renameWatcher:path:movedTo:)]) {
         [delegate renameWatcher:self path:old movedTo:new];
@@ -72,36 +89,12 @@ static void ACRenameWatcherCallback(ConstFSEventStreamRef streamRef,
                                     void * eventPaths,
                                     const FSEventStreamEventFlags eventFlags[],
                                     const FSEventStreamEventId eventIds[]) {
-    static NSMutableDictionary * pathsForIds = nil;
-    if (!pathsForIds) {
-        pathsForIds = [NSMutableDictionary new];
-    }
-    
     ACRenameWatcher * watcher = (__bridge ACRenameWatcher *)clientCallBackInfo;
     for (size_t i = 0; i < numEvents; i++) {
-        NSNumber * testID = [NSNumber numberWithUnsignedLongLong:(eventIds[i] - 1)];
-        NSNumber * otherTestID = [NSNumber numberWithUnsignedLongLong:(eventIds[i] + 1)];
         if ((eventFlags[i] & kFSEventStreamEventFlagItemRenamed) == 0) {
-            if ([pathsForIds objectForKey:testID]) {
-                [pathsForIds removeObjectForKey:testID];
-            }
-            if ([pathsForIds objectForKey:otherTestID]) {
-                [pathsForIds removeObjectForKey:otherTestID];
-            }
             continue;
         }
         NSString * path = [NSString stringWithUTF8String:((char **)eventPaths)[i]];
-        if ([pathsForIds objectForKey:testID]) {
-            NSString * oldPath = [pathsForIds objectForKey:testID];
-            [watcher pathMoved:oldPath toPath:path];
-            [pathsForIds removeObjectForKey:testID];
-        } else if ([pathsForIds objectForKey:otherTestID]) {
-            NSString * newPath = [pathsForIds objectForKey:otherTestID];
-            [watcher pathMoved:path toPath:newPath];
-            [pathsForIds removeObjectForKey:otherTestID];
-        } else {
-            [pathsForIds setObject:path
-                            forKey:[NSNumber numberWithUnsignedLongLong:eventIds[i]]];
-        }
+        [watcher gotEventID:eventIds[i] path:path];
     }
 }

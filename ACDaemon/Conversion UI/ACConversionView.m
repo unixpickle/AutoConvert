@@ -8,6 +8,8 @@
 
 #import "ACConversionView.h"
 
+static CGSize sizeForString(NSString * myString, NSFont * myFont);
+
 @implementation ACConversionView
 
 @synthesize converter;
@@ -37,7 +39,7 @@
         [cancelButton setAction:@selector(cancelPressed:)];
         [self addSubview:cancelButton];
         
-        subtitleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(60, 10, 320, 10)];
+        subtitleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(60, 10, 320, 11)];
         [subtitleLabel setBordered:NO];
         [subtitleLabel setSelectable:NO];
         [subtitleLabel setBackgroundColor:[NSColor clearColor]];
@@ -49,7 +51,7 @@
         [titleLabel setBordered:NO];
         [titleLabel setSelectable:NO];
         [titleLabel setBackgroundColor:[NSColor clearColor]];
-        [titleLabel setStringValue:[converter conversionTitle]];
+        [titleLabel setStringValue:[self shrinkText:[converter conversionTitle] withLabel:titleLabel]];
         [titleLabel setFont:[NSFont systemFontOfSize:11]];
         [self addSubview:titleLabel];
         
@@ -74,6 +76,24 @@
     [delegate conversionViewFinished:self];
 }
 
+#pragma mark UI Drawing
+
+- (NSString *)shrinkText:(NSString *)text withLabel:(NSTextField *)label {
+    CGFloat maxWidth = label.frame.size.width;
+    NSFont * font = [label font];
+    NSString * testString = text;
+    NSInteger cutLength = 1, cutStart = [text length] / 2;
+    while (sizeForString(testString, font).width > maxWidth) {
+        cutLength += 1;
+        cutStart = [text length] / 2 + cutLength / 2;
+        if (cutStart - cutLength < 0) cutStart++;
+        if (cutStart >= [text length]) return nil;
+        testString = [text stringByReplacingCharactersInRange:NSMakeRange(cutStart - cutLength, cutLength)
+                                                   withString:@"..."];
+    }
+    return testString;
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
     [backgroundColor set];
     NSRectFill(self.bounds);
@@ -87,7 +107,9 @@
 
 - (void)converter:(ACConverter *)aConverter progressUpdate:(float)progress {
     [progressIndicator setDoubleValue:progress];
-    [subtitleLabel setStringValue:[converter conversionSubtitle]];
+    NSString * subtitle = [converter conversionSubtitle];
+    NSString * shrunk = [self shrinkText:subtitle withLabel:subtitleLabel];
+    [subtitleLabel setStringValue:shrunk];
 }
 
 - (void)converter:(ACConverter *)aConverter failedWithError:(NSError *)error {
@@ -102,7 +124,8 @@
     [self addSubview:okayButton];
     
     NSString * errorString = [NSString stringWithFormat:@"Failed to convert %@", [[converter file] lastPathComponent]];
-    [titleLabel setStringValue:errorString];
+    NSString * shrunk = [self shrinkText:errorString withLabel:titleLabel];
+    [titleLabel setStringValue:shrunk];
     
     [subtitleLabel removeFromSuperview];
     [cancelButton removeFromSuperview];
@@ -114,3 +137,18 @@
 }
 
 @end
+
+static CGSize sizeForString(NSString * myString, NSFont * myFont) {
+    NSTextStorage * textStorage = [[NSTextStorage alloc] initWithString:myString];
+    NSTextContainer * textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(FLT_MAX, FLT_MAX)];
+    NSLayoutManager * layoutManager = [[NSLayoutManager alloc] init];
+    
+    [layoutManager addTextContainer:textContainer];
+    [textStorage addLayoutManager:layoutManager];
+    [textStorage addAttribute:NSFontAttributeName value:myFont
+                        range:NSMakeRange(0, [textStorage length])];
+    [textContainer setLineFragmentPadding:0.0];
+    
+    [layoutManager glyphRangeForTextContainer:textContainer];
+    return [layoutManager usedRectForTextContainer:textContainer].size;
+}

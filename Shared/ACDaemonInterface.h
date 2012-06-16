@@ -11,5 +11,6 @@
 @protocol ACDaemonInterface <NSObject>
 
 - (void)preferencesChanged;
+- (void)terminate;
 
 @end

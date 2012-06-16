@@ -43,6 +43,13 @@
     if ([autoLaunch bundleExistsInLaunchItems]) {
         [autoLaunchCheckbox setState:1];
     }
+    
+    daemonWatcher = [[ACDaemonWatcher alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(daemonStatusChanged:)
+                                                 name:ACDaemonWatcherRunningChangedNotification
+                                               object:daemonWatcher];
+    [self daemonStatusChanged:nil];
 }
 
 - (void)includeAddPressed:(id)sender {
@@ -79,11 +86,25 @@
     }
 }
 
+- (IBAction)launchDaemon:(id)sender {
+    if ([daemonWatcher isDaemonRunning]) {
+        [daemonWatcher terminateDaemon];
+    } else {
+        [daemonWatcher executeDaemon];
+    }
+}
+
+- (void)daemonStatusChanged:(NSNotification *)notification {
+    if ([daemonWatcher isDaemonRunning]) {
+        [launchButton setTitle:@"Terminate Daemon"];
+    } else {
+        [launchButton setTitle:@"Execute Daemon"];
+    }
+}
+
 - (BOOL)notifyDaemonChange {
-    id proxy = [NSConnection rootProxyForConnectionWithRegisteredName:@"ACDaemon" host:nil];
-    if (!proxy) return NO;
-    [proxy setProtocolForProxy:@protocol(ACDaemonInterface)];
-    [proxy preferencesChanged];
+    [daemonWatcher tryToConnect];
+    [[daemonWatcher connectedProxy] preferencesChanged];
     return YES;
 }
 

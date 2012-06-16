@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ACPathHistory.h"
 
 @class ACRenameWatcher;
 
@@ -21,6 +22,7 @@
     NSString * path;
     FSEventStreamRef eventStream;
     __weak id<ACRenameWatcherDelegate> delegate;
+    ACPathHistory * pathHistory;
 }
 
 @property (nonatomic, weak) id<ACRenameWatcherDelegate> delegate;

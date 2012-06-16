@@ -56,6 +56,8 @@
 		FA7720131583D85100A774D1 /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
 		FA77201B1583DA6700A774D1 /* ACPlugIn.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
 		FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77201D1583DB9600A774D1 /* ACBundleLoader.m */; };
+		FAAC0843158D3BFA0083C34B /* ACPathHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0842158D3BFA0083C34B /* ACPathHistory.m */; };
+		FAAC0846158D431D0083C34B /* ACDaemonWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
@@ -185,6 +187,10 @@
 		FA77201C1583DB9600A774D1 /* ACBundleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACBundleLoader.h; sourceTree = "<group>"; };
 		FA77201D1583DB9600A774D1 /* ACBundleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACBundleLoader.m; sourceTree = "<group>"; };
 		FA7720281583E46800A774D1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FAAC0841158D3BFA0083C34B /* ACPathHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPathHistory.h; sourceTree = "<group>"; };
+		FAAC0842158D3BFA0083C34B /* ACPathHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathHistory.m; sourceTree = "<group>"; };
+		FAAC0844158D431D0083C34B /* ACDaemonWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDaemonWatcher.h; sourceTree = "<group>"; };
+		FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDaemonWatcher.m; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -308,6 +314,8 @@
 				FA771FA115812E7000A774D1 /* ANAutoLaunch.m */,
 				FA73FF3015800D4900D64D76 /* ACAppDelegate.h */,
 				FA73FF3115800D4900D64D76 /* ACAppDelegate.m */,
+				FAAC0844158D431D0083C34B /* ACDaemonWatcher.h */,
+				FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */,
 				FA73FF3315800D4900D64D76 /* MainMenu.xib */,
 				FA73FF2515800D4900D64D76 /* Supporting Files */,
 			);
@@ -329,14 +337,13 @@
 		FA73FF4215800D8E00D64D76 /* ACDaemon */ = {
 			isa = PBXGroup;
 			children = (
+				FAAC083F158D3BE50083C34B /* Rename Watcher */,
 				FA771FDC1582B71500A774D1 /* Conversion UI */,
 				FA771FC5158224B900A774D1 /* Conversion */,
 				FA771FB1158147F300A774D1 /* Focus */,
 				FA771FBE15814AB000A774D1 /* Path Matcher */,
 				FA73FF4E15800D8E00D64D76 /* ACAppDelegate.h */,
 				FA73FF4F15800D8E00D64D76 /* ACAppDelegate.m */,
-				FA771FA71581378400A774D1 /* ACRenameWatcher.h */,
-				FA771FA81581378400A774D1 /* ACRenameWatcher.m */,
 				FA771FD415828F8A00A774D1 /* ACConfirmDialog.h */,
 				FA771FD515828F8B00A774D1 /* ACConfirmDialog.m */,
 				FA73FF5115800D8E00D64D76 /* MainMenu.xib */,
@@ -442,6 +449,17 @@
 				FA7720061583D7F900A774D1 /* ACPlugIn-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAC083F158D3BE50083C34B /* Rename Watcher */ = {
+			isa = PBXGroup;
+			children = (
+				FA771FA71581378400A774D1 /* ACRenameWatcher.h */,
+				FA771FA81581378400A774D1 /* ACRenameWatcher.m */,
+				FAAC0841158D3BFA0083C34B /* ACPathHistory.h */,
+				FAAC0842158D3BFA0083C34B /* ACPathHistory.m */,
+			);
+			name = "Rename Watcher";
 			sourceTree = "<group>";
 		};
 		FAF980481580F81200C25EF0 /* ANControlBar */ = {
@@ -656,6 +674,7 @@
 				FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */,
 				FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */,
 				FA771FA215812E7000A774D1 /* ANAutoLaunch.m in Sources */,
+				FAAC0846158D431D0083C34B /* ACDaemonWatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +698,7 @@
 				FA771FF31582E3F300A774D1 /* ACMouseView.m in Sources */,
 				FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */,
 				FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */,
+				FAAC0843158D3BFA0083C34B /* ACPathHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

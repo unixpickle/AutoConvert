@@ -46,4 +46,6 @@
 - (void)cancelPressed:(id)sender;
 - (void)okayPressed:(id)sender;
 
+- (NSString *)shrinkText:(NSString *)text withLabel:(NSTextField *)label;
+
 @end

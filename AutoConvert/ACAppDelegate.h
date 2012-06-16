@@ -12,6 +12,7 @@
 #import "ACPreferences.h"
 #import "ANAutoLaunch.h"
 #import "ACDaemonInterface.h"
+#import "ACDaemonWatcher.h"
 
 @interface ACAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource> {
     IBOutlet NSTableView * excludeTable;
@@ -25,9 +26,11 @@
     ANAddRemoveButton * includeRemoveButton;
     
     IBOutlet NSButton * autoLaunchCheckbox;
+    IBOutlet NSButton * launchButton;
     
     ACPreferences * preferences;
     ANAutoLaunch * autoLaunch;
+    ACDaemonWatcher * daemonWatcher;
 }
 
 - (void)includeAddPressed:(id)sender;
@@ -36,6 +39,8 @@
 - (void)excludeRemovePressed:(id)sender;
 
 - (IBAction)autoLaunchChanged:(id)sender;
+- (IBAction)launchDaemon:(id)sender;
+- (void)daemonStatusChanged:(NSNotification *)notification;
 
 - (BOOL)notifyDaemonChange;
 

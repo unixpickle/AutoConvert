@@ -53,6 +53,21 @@
     }
 }
 
+- (void)killConverters {
+    while ([conversionViews count] > 0) {
+        ACConversionView * conversion = [conversionViews lastObject];
+        [conversion setDelegate:nil];
+        [conversion cancelPressed:nil];
+        [conversion removeFromSuperview];
+        [conversionViews removeLastObject];
+    }
+    if (isVisible) {
+        [self orderOut:self];
+        [ACFinderFocus removeOpenWindow:self];
+        isVisible = NO;
+    }
+}
+
 - (void)layoutConversionViews {
     CGFloat totalHeight = [conversionViews count] * kACConversionViewHeight;
     CGFloat y = totalHeight - kACConversionViewHeight;

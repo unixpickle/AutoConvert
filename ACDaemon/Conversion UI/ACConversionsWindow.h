@@ -17,5 +17,6 @@
 
 + (ACConversionsWindow *)sharedConversionsWindow;
 - (void)pushConverter:(ACConverter *)converter;
+- (void)killConverters;
 
 @end

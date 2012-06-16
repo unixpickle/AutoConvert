@@ -41,6 +41,14 @@
     [preferences reloadFromFile];
 }
 
+- (void)terminate {
+    NSLog(@"Told to terminate by preferences process!");
+    [[ACConversionsWindow sharedConversionsWindow] killConverters];
+    [connection registerName:nil];
+    connection = nil;
+    [[NSApplication sharedApplication] performSelector:@selector(terminate:) withObject:nil afterDelay:1];
+}
+
 #pragma mark - File Watching -
 
 - (void)renameWatcher:(ACRenameWatcher *)sender path:(NSString *)oldPath movedTo:(NSString *)newPath {
