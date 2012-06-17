@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ACConverter.h"
+#import "ACConverterBridge.h"
 
 @interface ACConverterPool : NSObject {
     NSMutableArray * converterClasses;
@@ -18,5 +18,8 @@
 - (void)addConverterClass:(Class)converter;
 - (Class)converterClassForSourceExtension:(NSString *)ext1 destination:(NSString *)ext2;
 - (ACConverter *)converterForFile:(NSString *)path source:(NSString *)ext1 destination:(NSString *)ext2;
+
+- (NSString *)suggestedBridgeForInput:(NSString *)input output:(NSString *)output;
+- (BOOL)bridgeFormat:(NSString *)input toFormat:(NSString *)output formats:(NSArray **)pathsOut converters:(NSArray **)classesOut;
 
 @end

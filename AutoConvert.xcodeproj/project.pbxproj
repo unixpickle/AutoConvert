@@ -58,6 +58,9 @@
 		FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77201D1583DB9600A774D1 /* ACBundleLoader.m */; };
 		FAAC0843158D3BFA0083C34B /* ACPathHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0842158D3BFA0083C34B /* ACPathHistory.m */; };
 		FAAC0846158D431D0083C34B /* ACDaemonWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */; };
+		FAACFD7E158E81CD00612D9C /* FLACConverter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */; };
+		FAACFD7F158E81CE00612D9C /* FLACConverter.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */; };
+		FAACFD82158E824700612D9C /* ACConverterBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACFD81158E824700612D9C /* ACConverterBridge.m */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
@@ -106,6 +109,7 @@
 			files = (
 				FA5D5B1C158BAA88001307AD /* BasicMP3.bundle in CopyFiles */,
 				FA68FD9F1585171D0044AA9A /* BasicAudio.bundle in CopyFiles */,
+				FAACFD7F158E81CE00612D9C /* FLACConverter.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +195,9 @@
 		FAAC0842158D3BFA0083C34B /* ACPathHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathHistory.m; sourceTree = "<group>"; };
 		FAAC0844158D431D0083C34B /* ACDaemonWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDaemonWatcher.h; sourceTree = "<group>"; };
 		FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDaemonWatcher.m; sourceTree = "<group>"; };
+		FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FLACConverter.bundle; sourceTree = "<group>"; };
+		FAACFD80158E824700612D9C /* ACConverterBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverterBridge.h; sourceTree = "<group>"; };
+		FAACFD81158E824700612D9C /* ACConverterBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverterBridge.m; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -355,6 +362,7 @@
 		FA73FF4315800D8E00D64D76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */,
 				FA5D5B1A158BAA86001307AD /* BasicMP3.bundle */,
 				FA771FF71583B1F700A774D1 /* stolen icon.icns */,
 				FA771FE31582BDF300A774D1 /* close1.png */,
@@ -412,6 +420,8 @@
 				FA771FCD15822D1500A774D1 /* ACConverterPool.m */,
 				FA77201C1583DB9600A774D1 /* ACBundleLoader.h */,
 				FA77201D1583DB9600A774D1 /* ACBundleLoader.m */,
+				FAACFD80158E824700612D9C /* ACConverterBridge.h */,
+				FAACFD81158E824700612D9C /* ACConverterBridge.m */,
 			);
 			path = Conversion;
 			sourceTree = "<group>";
@@ -625,6 +635,7 @@
 				FA771FE91582BDF300A774D1 /* close4.png in Resources */,
 				FA771FEA1582BDF300A774D1 /* close3.png in Resources */,
 				FA771FF81583B1F700A774D1 /* stolen icon.icns in Resources */,
+				FAACFD7E158E81CD00612D9C /* FLACConverter.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +710,7 @@
 				FA771FF61583A87E00A774D1 /* ACFinderFocus.m in Sources */,
 				FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */,
 				FAAC0843158D3BFA0083C34B /* ACPathHistory.m in Sources */,
+				FAACFD82158E824700612D9C /* ACConverterBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
