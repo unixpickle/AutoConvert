@@ -60,14 +60,12 @@
     if (err != noErr) return NO;
     err = ExtAudioFileWrapAudioFileID(primInputFile, FALSE, &inputFile);
     if (err != noErr) return NO;
-    
     // get the file's input format
     UInt32 size = sizeof(inputFormat);
     Boolean writable = 0;
     ExtAudioFileGetPropertyInfo(inputFile, kExtAudioFileProperty_FileDataFormat, &size, &writable);
     err = ExtAudioFileGetProperty(inputFile, kExtAudioFileProperty_FileDataFormat, &size, &inputFormat);
     if (err != noErr) return NO;
-    
     return YES;
 }
 
@@ -132,6 +130,7 @@
                                              NULL,
                                              kAudioFileFlags_EraseFile,
                                              &outputFile);
+    
     return (err == noErr);
 }
 
@@ -141,8 +140,8 @@
     clientFormat.mFormatFlags = kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked;
     clientFormat.mChannelsPerFrame = inputFormat.mChannelsPerFrame;
     clientFormat.mBitsPerChannel = 16;
-    clientFormat.mBytesPerFrame = 4;
-    clientFormat.mBytesPerPacket = 4;
+    clientFormat.mBytesPerFrame = 2 * inputFormat.mChannelsPerFrame;
+    clientFormat.mBytesPerPacket = 2 * inputFormat.mChannelsPerFrame;
     clientFormat.mFramesPerPacket = 1;
     
     OSStatus err;
@@ -151,9 +150,9 @@
     if (err != noErr) return NO;
     
     size = sizeof(clientFormat);
+    
     err = ExtAudioFileSetProperty(outputFile, kExtAudioFileProperty_ClientDataFormat, size, &clientFormat);
     if (err != noErr) return NO;
-    
     return YES;
 }
 

@@ -54,6 +54,9 @@
     if ([input isEqualToString:@"flac"] || [output isEqualToString:@"flac"]) {
         return @"wav";
     }
+    if ([input isEqualToString:@"xm"] || [output isEqualToString:@"xm"]) {
+        return @"wav";
+    }
     return nil;
 }
 

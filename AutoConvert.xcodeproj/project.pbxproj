@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA5D5B1C158BAA88001307AD /* BasicMP3.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA5D5B1A158BAA86001307AD /* BasicMP3.bundle */; };
+		FA66EBB7158EB2F900595946 /* VideoConverter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA66EBB6158EB2F900595946 /* VideoConverter.bundle */; };
+		FA66EBB9158EB2FC00595946 /* VideoConverter.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA66EBB6158EB2F900595946 /* VideoConverter.bundle */; };
 		FA68FD90158516CC0044AA9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA73FF1E15800D4900D64D76 /* Cocoa.framework */; };
 		FA68FD96158516CC0044AA9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA68FD94158516CC0044AA9A /* InfoPlist.strings */; };
 		FA68FD9B158516D60044AA9A /* ACPlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA771FFE1583D7F900A774D1 /* ACPlugIn.framework */; };
@@ -58,9 +60,9 @@
 		FA77201E1583DB9600A774D1 /* ACBundleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77201D1583DB9600A774D1 /* ACBundleLoader.m */; };
 		FAAC0843158D3BFA0083C34B /* ACPathHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0842158D3BFA0083C34B /* ACPathHistory.m */; };
 		FAAC0846158D431D0083C34B /* ACDaemonWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */; };
-		FAACFD7E158E81CD00612D9C /* FLACConverter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */; };
-		FAACFD7F158E81CE00612D9C /* FLACConverter.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */; };
 		FAACFD82158E824700612D9C /* ACConverterBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACFD81158E824700612D9C /* ACConverterBridge.m */; };
+		FACE2704158F9DE00051A500 /* FFMPEGAudio.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FACE2703158F9DE00051A500 /* FFMPEGAudio.bundle */; };
+		FACE2705158F9DE20051A500 /* FFMPEGAudio.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = FACE2703158F9DE00051A500 /* FFMPEGAudio.bundle */; };
 		FAF9804F1580F81200C25EF0 /* ANAddRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */; };
 		FAF980501580F81200C25EF0 /* ANBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804C1580F81200C25EF0 /* ANBarButton.m */; };
 		FAF980511580F81200C25EF0 /* ANControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9804E1580F81200C25EF0 /* ANControlBar.m */; };
@@ -107,9 +109,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				FA66EBB9158EB2FC00595946 /* VideoConverter.bundle in CopyFiles */,
 				FA5D5B1C158BAA88001307AD /* BasicMP3.bundle in CopyFiles */,
 				FA68FD9F1585171D0044AA9A /* BasicAudio.bundle in CopyFiles */,
-				FAACFD7F158E81CE00612D9C /* FLACConverter.bundle in CopyFiles */,
+				FACE2705158F9DE20051A500 /* FFMPEGAudio.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		FA5D5B1A158BAA86001307AD /* BasicMP3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BasicMP3.bundle; sourceTree = "<group>"; };
+		FA66EBB6158EB2F900595946 /* VideoConverter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VideoConverter.bundle; sourceTree = "<group>"; };
 		FA68FD8F158516CC0044AA9A /* BasicAudio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAudio.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA68FD93158516CC0044AA9A /* BasicAudio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicAudio-Info.plist"; sourceTree = "<group>"; };
 		FA68FD95158516CC0044AA9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -195,9 +199,9 @@
 		FAAC0842158D3BFA0083C34B /* ACPathHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPathHistory.m; sourceTree = "<group>"; };
 		FAAC0844158D431D0083C34B /* ACDaemonWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDaemonWatcher.h; sourceTree = "<group>"; };
 		FAAC0845158D431D0083C34B /* ACDaemonWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDaemonWatcher.m; sourceTree = "<group>"; };
-		FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FLACConverter.bundle; sourceTree = "<group>"; };
 		FAACFD80158E824700612D9C /* ACConverterBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConverterBridge.h; sourceTree = "<group>"; };
 		FAACFD81158E824700612D9C /* ACConverterBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACConverterBridge.m; sourceTree = "<group>"; };
+		FACE2703158F9DE00051A500 /* FFMPEGAudio.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FFMPEGAudio.bundle; sourceTree = "<group>"; };
 		FAF980491580F81200C25EF0 /* ANAddRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAddRemoveButton.h; sourceTree = "<group>"; };
 		FAF9804A1580F81200C25EF0 /* ANAddRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAddRemoveButton.m; sourceTree = "<group>"; };
 		FAF9804B1580F81200C25EF0 /* ANBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBarButton.h; sourceTree = "<group>"; };
@@ -362,7 +366,8 @@
 		FA73FF4315800D8E00D64D76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FAACFD7D158E81CD00612D9C /* FLACConverter.bundle */,
+				FACE2703158F9DE00051A500 /* FFMPEGAudio.bundle */,
+				FA66EBB6158EB2F900595946 /* VideoConverter.bundle */,
 				FA5D5B1A158BAA86001307AD /* BasicMP3.bundle */,
 				FA771FF71583B1F700A774D1 /* stolen icon.icns */,
 				FA771FE31582BDF300A774D1 /* close1.png */,
@@ -635,7 +640,8 @@
 				FA771FE91582BDF300A774D1 /* close4.png in Resources */,
 				FA771FEA1582BDF300A774D1 /* close3.png in Resources */,
 				FA771FF81583B1F700A774D1 /* stolen icon.icns in Resources */,
-				FAACFD7E158E81CD00612D9C /* FLACConverter.bundle in Resources */,
+				FA66EBB7158EB2F900595946 /* VideoConverter.bundle in Resources */,
+				FACE2704158F9DE00051A500 /* FFMPEGAudio.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
